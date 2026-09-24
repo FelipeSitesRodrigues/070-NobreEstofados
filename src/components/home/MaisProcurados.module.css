@@ -1,0 +1,19 @@
+.verTodos {
+  display: none;
+}
+
+/* Celular: um card por linha fica longo; três e o botão, como no mockup do celular */
+@media (max-width: 639px) {
+  .grade > li:nth-child(n + 4) {
+    display: none;
+  }
+
+  .linkTopo {
+    display: none;
+  }
+
+  .verTodos {
+    display: inline-flex;
+    margin-top: 24px;
+  }
+}

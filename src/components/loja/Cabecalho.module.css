@@ -1,0 +1,513 @@
+/* Header ----------------------------------------------------------------------- */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background: var(--cor-superficie);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+/* Sombra aparece quando a página rola (CSS puro, onde o navegador suporta) */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .header {
+      animation: sombra-header linear both;
+      animation-timeline: scroll();
+      animation-range: 0 120px;
+    }
+  }
+}
+
+@keyframes sombra-header {
+  to {
+    box-shadow: 0 10px 30px -18px rgba(58, 41, 32, 0.35);
+  }
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: 'logo nav ferramentas';
+  align-items: center;
+  gap: 28px;
+  height: var(--altura-header);
+}
+
+.logo {
+  grid-area: logo;
+  display: block;
+  border-radius: 4px;
+}
+
+.logo img {
+  width: auto;
+  height: 50px;
+}
+
+.nav {
+  grid-area: nav;
+  justify-self: center;
+}
+
+.nav ul {
+  display: flex;
+  gap: clamp(14px, 1.9vw, 32px);
+}
+
+.nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Fio embaixo do item: aparece no hover e fica na página atual */
+.nav a::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 6px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--cor-madeira);
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale var(--duracao-media) var(--ease-saida);
+}
+
+.nav a[aria-current='page'] {
+  font-weight: 700;
+}
+
+.nav a[aria-current='page']::after {
+  scale: 1 1;
+}
+
+@media (hover: hover) {
+  .nav a:hover::after {
+    scale: 1 1;
+  }
+}
+
+.ferramentas {
+  grid-area: ferramentas;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.busca {
+  display: flex;
+  align-items: stretch;
+  width: clamp(200px, 17vw, 270px);
+  height: 48px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-controle);
+  background: var(--cor-fundo);
+  overflow: hidden;
+  transition: border-color var(--duracao-rapida) var(--ease-suave), box-shadow var(--duracao-rapida) var(--ease-suave);
+}
+
+.busca:focus-within {
+  border-color: var(--cor-madeira);
+  box-shadow: 0 0 0 3px rgba(122, 94, 68, 0.18);
+}
+
+.busca input {
+  flex: 1;
+  min-width: 0;
+  padding: 0 14px;
+  border: 0;
+  background: transparent;
+  font-size: var(--texto-menor);
+}
+
+.busca input::placeholder {
+  color: var(--cor-texto-suave);
+  opacity: 1;
+}
+
+.busca input:focus {
+  outline: none;
+}
+
+.busca button {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  border: 0;
+  background: var(--cor-madeira);
+  color: #fff;
+  transition: background-color var(--duracao-rapida) var(--ease-suave);
+}
+
+@media (hover: hover) {
+  .busca button:hover {
+    background: var(--cor-madeira-hover);
+  }
+}
+
+.busca svg {
+  width: 22px;
+  height: 22px;
+}
+
+.carrinho {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 4px;
+  border-radius: var(--raio-controle);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* No desktop o ícone some na linha: ícone, "Carrinho" e "(2)" */
+.iconeCarrinho {
+  display: contents;
+}
+
+.carrinhoTexto {
+  order: 1;
+}
+
+.contador {
+  order: 2;
+}
+
+.carrinho svg {
+  width: 26px;
+  height: 26px;
+}
+
+.contador::before {
+  content: '(';
+}
+
+.contador::after {
+  content: ')';
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .contador[data-cheio] {
+    animation: pulo 420ms var(--ease-saida);
+  }
+}
+
+@keyframes pulo {
+  40% {
+    scale: 1.35;
+  }
+}
+
+@media (hover: hover) {
+  .carrinho:hover .carrinhoTexto {
+    text-decoration: underline;
+  }
+}
+
+.botaoMenu {
+  display: none;
+}
+
+.buscaCelular {
+  display: none;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--raio-controle);
+  text-decoration: none;
+}
+
+/* Só aparece embaixo do ícone no celular e no tablet */
+.rotuloIcone {
+  display: none;
+}
+
+.buscaCelular svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* Entre 1180 e 1439 px o campo de busca não cabe junto do menu: fica o ícone */
+@media (max-width: 1439px) {
+  .busca {
+    display: none;
+  }
+
+  .buscaCelular {
+    display: grid;
+  }
+}
+
+/* Celular e tablet: menu à esquerda, logo no meio, busca e carrinho à direita */
+@media (max-width: 1179px) {
+  .linha {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: 'menu logo ferramentas';
+    gap: 12px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .nav,
+  .busca {
+    display: none;
+  }
+
+  .ferramentas {
+    gap: 4px;
+  }
+
+  .botaoMenu {
+    grid-area: menu;
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 48px;
+    margin-left: -8px;
+    padding: 0 8px;
+    border: 0;
+    border-radius: var(--raio-controle);
+    background: none;
+    font-size: var(--texto-menor);
+    font-weight: 600;
+  }
+
+  .botaoMenu svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Ícone em cima e a palavra embaixo: nada de botão só com ícone */
+  .carrinho,
+  .buscaCelular {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    min-width: 60px;
+    min-height: 56px;
+    padding: 0 4px;
+  }
+
+  .carrinho {
+    margin-right: -8px;
+  }
+
+  .iconeCarrinho {
+    position: relative;
+    display: block;
+  }
+
+  .carrinhoTexto,
+  .rotuloIcone {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  .contador {
+    position: absolute;
+    top: -7px;
+    right: -13px;
+    display: grid;
+    place-items: center;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 5px;
+    border-radius: 11px;
+    background: var(--cor-madeira);
+    color: #fff;
+    font-size: 0.875rem;
+    line-height: 1;
+  }
+
+  .contador:not([data-cheio]) {
+    display: none;
+  }
+
+  .contador::before,
+  .contador::after {
+    content: none;
+  }
+}
+
+/* Celular: a busca fica dentro do Menu e na loja; o cabeçalho mostra só o carrinho */
+@media (max-width: 479px) {
+  .buscaCelular {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .botaoMenu span {
+    display: none;
+  }
+}
+
+/* Menu do celular -------------------------------------------------------------- */
+
+.menu {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: min(420px, 90vw);
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--cor-superficie);
+  color: var(--cor-texto);
+  box-shadow: 18px 0 48px -24px rgba(28, 20, 15, 0.5);
+  translate: 0 0;
+  transition:
+    translate var(--duracao-media) var(--ease-saida),
+    display var(--duracao-media) allow-discrete,
+    overlay var(--duracao-media) allow-discrete;
+}
+
+.menu:not([open]) {
+  translate: -100% 0;
+}
+
+@starting-style {
+  .menu[open] {
+    translate: -100% 0;
+  }
+}
+
+.menu::backdrop {
+  background: rgba(28, 20, 15, 0.45);
+  opacity: 1;
+  transition:
+    opacity var(--duracao-media) var(--ease-suave),
+    display var(--duracao-media) allow-discrete,
+    overlay var(--duracao-media) allow-discrete;
+}
+
+.menu:not([open])::backdrop {
+  opacity: 0;
+}
+
+@starting-style {
+  .menu[open]::backdrop {
+    opacity: 0;
+  }
+}
+
+.menuCaixa {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-height: 100%;
+  padding: 18px var(--margem) 32px;
+}
+
+.menuTopo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menuTitulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.fechar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 48px;
+  margin-right: -10px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: var(--raio-controle);
+  background: none;
+  font-size: var(--texto-menor);
+  font-weight: 600;
+}
+
+.fechar svg {
+  width: 24px;
+  height: 24px;
+}
+
+.menuBusca label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.menuBusca div {
+  display: flex;
+  height: 56px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-controle);
+  background: var(--cor-fundo);
+  overflow: hidden;
+}
+
+.menuBusca div:focus-within {
+  border-color: var(--cor-madeira);
+}
+
+.menuBusca input {
+  flex: 1;
+  min-width: 0;
+  padding: 0 16px;
+  border: 0;
+  background: transparent;
+  font-size: 1.0625rem;
+}
+
+.menuBusca input::placeholder {
+  color: var(--cor-texto-suave);
+  opacity: 1;
+}
+
+.menuBusca input:focus {
+  outline: none;
+}
+
+.menuBusca button {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  border: 0;
+  background: var(--cor-madeira);
+  color: #fff;
+}
+
+.menuBusca svg {
+  width: 24px;
+  height: 24px;
+}
+
+.menuLinks {
+  display: grid;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.menuLinks a {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  border-bottom: 1px solid var(--cor-borda);
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+}

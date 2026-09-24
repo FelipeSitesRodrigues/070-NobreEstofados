@@ -1,0 +1,26 @@
+/* Cabeçalho de seção: título à esquerda e, quando há, o link "ver todos" à direita */
+
+.cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px 32px;
+  margin-bottom: clamp(24px, 2.6vw, 40px);
+}
+
+.titulo {
+  font-size: var(--titulo-secao);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.apoio {
+  max-width: 62ch;
+  margin-top: 10px;
+  color: var(--cor-texto-suave);
+}
+
+:global(.escuro) .apoio {
+  color: var(--cor-no-escuro-suave);
+}

@@ -1,0 +1,53 @@
+.titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(1.5rem, 1.3rem + 0.6vw, 1.875rem);
+  font-weight: 500;
+}
+
+.titulo svg {
+  width: 34px;
+  height: 34px;
+  color: var(--cor-madeira);
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.item {
+  padding: 18px 18px 16px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  background: var(--cor-superficie);
+}
+
+.item dt {
+  font-size: var(--texto-menor);
+  font-weight: 600;
+}
+
+.valor {
+  margin-top: 4px;
+  font-size: clamp(1.5rem, 1.35rem + 0.5vw, 1.875rem);
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.detalhe {
+  margin-top: 6px;
+  color: var(--cor-texto-suave);
+  font-size: var(--texto-menor);
+  line-height: 1.4;
+}
+
+.dica {
+  margin-top: 16px;
+  color: var(--cor-texto-suave);
+  font-size: var(--texto-menor);
+}

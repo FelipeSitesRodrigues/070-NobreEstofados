@@ -1,0 +1,127 @@
+.tecidos {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.tecidos legend {
+  margin-bottom: 10px;
+  padding: 0;
+  font-weight: 700;
+}
+
+/* Cor escolhida: amostra grande e o nome, como a etiqueta do mostruário */
+.escolhido {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 96px;
+  padding: 12px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-controle);
+  background: var(--cor-superficie);
+}
+
+.amostra {
+  flex: none;
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.nomeEscolhido {
+  font-size: var(--texto-grande);
+  font-weight: 700;
+}
+
+.detalheEscolhido {
+  margin-top: 2px;
+  color: var(--cor-texto-suave);
+  font-size: var(--texto-menor);
+  line-height: 1.45;
+}
+
+.linha {
+  margin-top: 18px;
+}
+
+.cabecalhoLinha {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.nomeLinha {
+  font-weight: 600;
+}
+
+.precoLinha {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.bolinhas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* 48 px: alvo de toque confortável pra quem tem dedo grosso ou vista cansada */
+.bolinha {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(28, 20, 15, 0.14);
+  cursor: pointer;
+  transition: transform var(--duracao-rapida) var(--ease-saida), box-shadow var(--duracao-rapida) var(--ease-suave);
+}
+
+.bolinha img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* O rádio fica por cima, invisível: o toque cai nele e o teclado alcança */
+.bolinha input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Escolhida: anel de madeira com folga, que não some em tecido escuro nem claro */
+.bolinha:has(input:checked) {
+  box-shadow:
+    0 0 0 3px var(--cor-fundo),
+    0 0 0 6px var(--cor-madeira);
+}
+
+.bolinha:has(input:focus-visible) {
+  outline: 3px dashed var(--cor-madeira);
+  outline-offset: 7px;
+}
+
+@media (hover: hover) {
+  .bolinha:hover {
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bolinha {
+    transition: none;
+  }
+}

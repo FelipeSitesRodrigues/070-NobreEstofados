@@ -1,0 +1,186 @@
+.painel {
+  display: grid;
+  gap: 22px;
+}
+
+.cheio {
+  color: var(--cor-texto-suave);
+  font-size: var(--texto-menor);
+}
+
+.preco {
+  font-size: clamp(2rem, 1.7rem + 1vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+
+.parcela {
+  margin-top: 6px;
+  color: var(--cor-texto-suave);
+}
+
+.consulte {
+  color: var(--cor-madeira);
+  font-size: var(--texto-grande);
+  font-weight: 700;
+}
+
+.nota {
+  margin-top: 4px;
+  color: var(--cor-texto-suave);
+  font-size: var(--texto-menor);
+}
+
+.opcoes {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.opcoes legend {
+  margin-bottom: 10px;
+  padding: 0;
+  font-weight: 700;
+}
+
+.listaOpcoes {
+  display: grid;
+  gap: 10px;
+}
+
+.ajudaTamanho {
+  margin-top: 12px;
+  font-size: var(--texto-menor);
+}
+
+.ajudaTamanho a {
+  font-weight: 700;
+  color: var(--cor-madeira);
+  text-underline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .ajudaTamanho a:hover {
+    color: var(--cor-madeira-hover);
+  }
+}
+
+/* Opção como botão grande: rádio de verdade por baixo, pro teclado e o leitor de tela */
+.opcao {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 60px;
+  padding: 10px 16px;
+  border: 2px solid var(--cor-borda);
+  border-radius: var(--raio-controle);
+  background: var(--cor-superficie);
+  cursor: pointer;
+  transition: border-color var(--duracao-rapida) var(--ease-suave), background-color var(--duracao-rapida) var(--ease-suave);
+}
+
+.opcao input {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+}
+
+.opcao:has(input:checked) {
+  border-color: var(--cor-madeira);
+  background: #fff;
+}
+
+.opcao:has(input:focus-visible) {
+  outline: 3px solid var(--cor-madeira);
+  outline-offset: 2px;
+}
+
+.opcaoNome {
+  flex: 1;
+  font-weight: 600;
+}
+
+.opcaoPreco {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.disponibilidade {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--texto-menor);
+}
+
+.disponibilidade::before {
+  content: '';
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--cor-taupe);
+}
+
+.disponibilidade[data-tipo='pronta-entrega']::before {
+  background: var(--cor-sucesso);
+}
+
+.disponibilidade[data-tipo='indisponivel']::before {
+  background: var(--cor-alerta);
+}
+
+.botoes {
+  display: grid;
+  gap: 12px;
+}
+
+.comprar {
+  min-height: 64px;
+  font-size: 1.1875rem;
+}
+
+.comprar svg {
+  width: 26px;
+  height: 26px;
+}
+
+.botoes button[data-feito] {
+  border-color: var(--cor-madeira);
+  color: var(--cor-madeira);
+}
+
+.explica {
+  color: var(--cor-texto-suave);
+  font-size: var(--texto-menor);
+  line-height: 1.5;
+}
+
+.explica strong {
+  color: var(--cor-texto);
+  font-weight: 600;
+}
+
+/* Barra do celular */
+.barra {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .barra {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: var(--z-flutuante);
+    display: block;
+    padding: 12px var(--margem) max(12px, env(safe-area-inset-bottom));
+    border-top: 1px solid var(--cor-borda);
+    background: var(--cor-superficie);
+    box-shadow: 0 -12px 30px -20px rgba(28, 20, 15, 0.45);
+    translate: 0 110%;
+    transition: translate var(--duracao-media) var(--ease-saida);
+  }
+
+  .barra[data-visivel] {
+    translate: 0 0;
+  }
+}

@@ -1,0 +1,133 @@
+.galeria {
+  display: grid;
+  gap: 12px;
+}
+
+.principal {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--raio);
+  background: var(--cor-bege);
+  overflow: hidden;
+}
+
+.principal img,
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video {
+  background: #000;
+  object-fit: contain;
+}
+
+.vazia {
+  display: grid;
+  place-items: center;
+  color: var(--cor-texto);
+}
+
+.capaVideo {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 24px;
+  border-radius: 28px;
+  background: rgba(28, 20, 15, 0.78);
+  color: #fff;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  translate: -50% -50%;
+  transition: scale var(--duracao-media) var(--ease-saida);
+}
+
+.play svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (hover: hover) {
+  .capaVideo:hover .play {
+    scale: 1.05;
+  }
+}
+
+.miniaturas {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.miniatura {
+  position: relative;
+  display: block;
+  width: 108px;
+  aspect-ratio: 16 / 10;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: var(--raio-controle);
+  background: var(--cor-bege);
+  overflow: hidden;
+  opacity: 0.7;
+  transition:
+    opacity var(--duracao-rapida) var(--ease-suave),
+    border-color var(--duracao-rapida) var(--ease-suave);
+}
+
+.miniatura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.miniatura[aria-current] {
+  border-color: var(--cor-madeira);
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .miniatura:hover {
+    opacity: 1;
+  }
+}
+
+.miniPlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(28, 20, 15, 0.35);
+  color: #fff;
+}
+
+.miniPlay svg {
+  width: 26px;
+  height: 26px;
+}
+
+@media (max-width: 1023px) {
+  .principal {
+    border-radius: 0;
+  }
+
+  .miniaturas {
+    padding-inline: var(--margem);
+  }
+}

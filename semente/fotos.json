@@ -1,0 +1,252 @@
+{
+  "sofa-dubai": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwBACdASoUAA0APu1iqk2ppaQiMAgBMB2JZwCdAYty5yAWAK+XohTPswAA/QHb2zk6FP5M3RmoGwNiOqiOjpM07cEFqGey2j8QeZ+Je4sD2s1NVcmZedhTN+I8kdlBpc4y85h1fZnuNAAA"
+  },
+  "sofa-porto-principe": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZQCw7Btw4JZ3hFtoHQAA/lhPnFLYmOsCbrTHbLeArdgUYQWcoSzg6ggKOAromz3SuLTQiiqsqC/NWN89Qv4ylQ3B4XH+Nt+8OJ+078NwQfVKgoZ6DGqaGIcFUkddhNoAAA=="
+  },
+  "sofa-leblon": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAACwAwCdASoUAA0APu1iqU2ppaQiMAgBMB2JZwCdABZTr0MRV4i3IAD+07keu4zcAMqcDNTz23w8ktjO4RVgvtf8hP2BXOHVKQZLH/fjFOmvsrnufYFv4x8SLh9yWFyc//vVm0l+yt/t1/4syah0eIbv4hj0cs8x3y/1zHHh8dQ+EQSwn/wo0AAA"
+  },
+  "sofa-montreal": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JYwCdMoACsgMZge8Embr4LAD+2GMdG9vk/9/3fJhLN/T9Say59mcqWsYf5zHXkm1mNJoxA9vkbkuzcuY1KivZtY6QCGqASlMluTNRcnW/C98MwXQFycETuwAAAA=="
+  },
+  "sofa-milao": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADQAwCdASoUAA0APu1iqU2ppaQiMAgBMB2JZQCw7CDRRx8px4iIFgAA/rH73b1+1AiVnLaXLoHlP+vbt0QJ64r1e1rZZRnP2wUkUiypw4Ow6bNjMFRHYXrpj6Q1q6IxaSBbBYpojJTFm0JVH7co/7FVHKmRUQAA"
+  },
+  "sofa-espanha": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JZwDG9BuOobHM3gk0uGGSQAD9AGECj6oWv2Fs6hZSfIP0q2XtcYYTW7WaXPOMWuHdfzOltgkUn/PUWgIb0K8pnjXnoeF6QGrvgcQs4tYb9uSr4fS4dlpJdkREwAAA"
+  },
+  "sofa-genebra": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACQAwCdASoUAA0APu1iqU2ppaQiMAgBMB2JZQCdABkglQhHnzcgAP5+l+oyKjKeQ5vb92/Am4XlFK3Y+MMqaZKLErZuHVytN9nid7WDH1VRF/bBivzrQMljldhbEdvxnM7P/ZEmgAA="
+  },
+  "sofa-veneza": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JQBOmUAS2Qg6bowHSBgAAAP7YPP4f6yhWYilfHEtD8lRwbxFPeKlDZbEb186HKxZaMAn9GvXkW1hwk5zUouYDNICgveaHclsS1575ewZ6g3hv+BnfMh1fuE75eDjlH8bgD/w+dAMmUB/5hVgAAA=="
+  },
+  "sofa-madrid": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYwCdABdohrj1LrgA/usWP6r6733gRAUJsIf5iwnw0XvIlmObNzooLgO90io1Q8dKoN/O5kXlE9ViG3XS7BMtlUtCud7jKVZuKtlzlETJK1BQQWwv9HQAAAA="
+  },
+  "sofa-londres": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JZgCdMoAChfZwXtSfnkSMgAD+2BGp5hV6er2Ogb/BRPqaxMrteO9/qHS235fOdIwAR2EouUOw/9BraJhmsIdHQoJVUQGdvfvd/IQdKhPJhwjo2O4PZPEgJwAAAA=="
+  },
+  "sofa-miami": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYwAAQx7BWfM4QQAA/rY/uBLP4bGwNDvMxvG/gWxdC1qUPVh81pT2ziVXcwD85E86NXMzVjMDviNKzMkDIWwMdXo/WvnKtlqtCWyC6irLpgHdwAA="
+  },
+  "sofa-apollo": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZQCw7CPzu74iJL0o213gAP6ahPAbV94EXHfQgEcQiP9Uz8ykMcgdT8L/om7dQ+SARhZEHNM005k9AcrC0NrL8jJ7QsV40UvMZMmte2X2pPuElaP9CBXMoi7QUoAA"
+  },
+  "sofa-paris": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBACdASoUAA0APu1iqU2ppaQiMAgBMB2JZQC7AYxYpOwIzDgV4oWSAAD+6ExffALZDacqu27Jfyp9PIYyFbrY9LTvhAreyOm8Tj65zRD/vd2uXHXlbVRlmc+oy7zi3MV30pH/Nx9006hGoHbxGJG71STvoqeku8mOhP79KbxcaAAA"
+  },
+  "sofa-italia": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYgCdABmzMv1e4VaAAPyzRF1/rslXi70wTrpyutVG0foQhcRfCRHTGlfA9tz52W5sld+byQtIz0vXvdEmMi7qfqKvi/qxbaLn1mnuQ4Hk/OrVrbDj0E2Vo8Y01EPzVSOxAAAA"
+  },
+  "sofa-barcelona": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAACwAwCdASoUAA0APu1iqU2ppaQiMAgBMB2JQBUegsxyC2zQHeyQAAD+1GloUFJ1Xofd+gzB0t+UKBbDTD79phYy1ijVVZ8Dby/T+9OT8PFTeweDf+DJfjoVf+/JKRikjsjRPDtqoPKyw3D4BosAi3I2dMmdRKvTtOdFroRK9rDC4HYziA0gAA=="
+  },
+  "canto-chaise-veneza": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZwC7AB607JCrNEHYCgAA/uv+Fl482rrlq3tmHT3Z+BqVNPSEuJkqBaJzS6uuQlK4V9KLu/IC7mf7WjpOr6rWUArDO4ZwkwZdEFLn271QoNM2PDAYAAAA"
+  },
+  "sofa-cama-tunisia": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZQCdACIGYZX9epFO1ruwAN+CSM4pae4VxX0nhfhdOX/p9WyomA1JLcWP1jmuZZ9MQP5W92tYqhl5RxEpRrwzV/rf3sd3/WsGzDyg4NT0eUfuZceEU8BsxFcGSkTvyNAAAA=="
+  },
+  "sofa-cama-copacabana": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZQCw7CKVygO7PISY96gAziXM4BIA2yUuXkWk4ixTst7VoeQ0B9NHMIATnfFfaUkGKmUTk59yVE/yLooQYiIdvHwJQH/u//IOIu15KE1H7USAiP6uHBTS9qIaoFZVUAAAAA=="
+  },
+  "sofa-cama-cordoba": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQAwCdASoUAA0APu1kqU2ppaQiMAgBMB2JZQCdACIPulwq6Vh8HIAA/bDKobME9X04DPkGDF6mTazBuN8NtvozlPo2Rh5jRKxOOAM0vUTLN8q1VIWPAJj3LjDYrbJ8Gj73P6lGCji1Bg1C65ogAA=="
+  },
+  "sofa-cama-eros": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAwCdASoUAA0APu1iqk4ppaQiMAgBMB2JZQCdMoACwQKlCJYJ+8wgAP63JEPvmawZZm6qkya1lrnWNZwGlqlFJW9nAvRZIot6jLZ6HzDSB6MWKnjDcRoykVXT7T95XvAJwAAA"
+  },
+  "conjunto-holanda": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwAwCdASoUAA0APu1iqU2ppaQiMAgBMB2JZQCzgBuMZ4pdSMHxbQAAAP7e9jxrDTdBtfZx5tV5nF8y6A0fwEtt2njvl0EY2hW8jJ6/oYB6i/6a8ZGb90G7zzFALuNeAMKKKW1IPJHVijPxDAAAAA=="
+  },
+  "conjunto-roma": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JZQC06CPo7dNA8nssrGhvb6AA/HeUOqr7UEKCpJaeY4yvRjJqNTRkoZe5MzyrhzbL+h38u6JkSAci3vgB8wFjCMybYcHMqbFL+L8baqm9WTWx05fT1UgJbFIyg+ItWtn/KrP4AAA="
+  },
+  "sofa-franca": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYgCdH8AC+8prLtKKQ0suAOJcxOnWiRXtS0XzlYSEPIN4nmD1GwcfW+g2KOefwbfpSr5kafmuij2l9wet7G1TJxuftdck3ETfKFgGEB+ev4JPfbwccvtkN4SqIU7JZWnREcLzrimG0wB9wwAAAA=="
+  },
+  "poltrona-carol": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZQC06BBoYUCZ+OYQXgAA/sQhdObTNrKUikyEAfCukd2hJ+rdVF9A7ldjnPacRBlr6IrNlPfDf0XJzIRsBLIqEVdaOoxZlk5e+w/DU6aTQSh13/dP8AAA"
+  },
+  "poltrona-opalla": {
+    "larguras": [
+      480,
+      960,
+      1600
+    ],
+    "largura": 1600,
+    "altura": 1001,
+    "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZQCdABeRSWziAXNbZlugAP6Y6s2nkyhKS64PSYBXa/n2fVcLpUMvG4iIYBBKPHjxYynez6pKutZPRW/csipCNfNfi4ykiZlcldHjPI0uXqau5IXXRAAA"
+  }
+}

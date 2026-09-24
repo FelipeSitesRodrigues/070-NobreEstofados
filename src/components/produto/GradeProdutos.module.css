@@ -1,0 +1,25 @@
+.grade {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 28px);
+}
+
+.grade > li {
+  display: flex;
+}
+
+.grade > li > * {
+  flex: 1;
+}
+
+@media (max-width: 1023px) {
+  .grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .grade {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

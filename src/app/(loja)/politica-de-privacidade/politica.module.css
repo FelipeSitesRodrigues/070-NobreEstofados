@@ -1,0 +1,25 @@
+.politica {
+  max-width: calc(760px + var(--margem) * 2);
+  padding-block: clamp(32px, 4vw, 56px) var(--espaco-secao);
+}
+
+.politica h1 {
+  font-size: clamp(2rem, 1.6rem + 1.4vw, 3rem);
+  font-weight: 500;
+}
+
+.atualizada {
+  margin-top: 8px;
+  color: var(--cor-texto-suave);
+  font-size: var(--texto-menor);
+}
+
+.politica h2 {
+  margin: 36px 0 12px;
+  font-size: clamp(1.375rem, 1.25rem + 0.5vw, 1.75rem);
+  font-weight: 500;
+}
+
+.politica p + p {
+  margin-top: 12px;
+}

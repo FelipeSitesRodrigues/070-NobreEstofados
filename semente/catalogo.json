@@ -1,0 +1,450 @@
+{
+  "_sobre": "Catálogo 26/27 da Nobre (sites/070 - Nobre Estofados/catalogo.md). Medidas em centímetros. 'pagina' é o número da foto no catálogo. Preço fica null até a Edna preencher no painel: sem preço, o site mostra 'Consulte o valor'. 'fixado' põe o produto nos Sofás mais procurados da home, nessa ordem.",
+  "categorias": [
+    {
+      "slug": "sofas-retrateis",
+      "nome": "Sofás retráteis",
+      "ordem": 1,
+      "descricao": "Os assentos deslizam para frente e o encosto reclina: é só puxar pra esticar as pernas e voltar quando quiser."
+    },
+    {
+      "slug": "sofas-de-canto",
+      "nome": "Sofás de canto",
+      "ordem": 2,
+      "descricao": "Sofás de canto e com chaise, pra aproveitar bem o espaço da sala e acomodar mais gente."
+    },
+    {
+      "slug": "sofas-cama",
+      "nome": "Sofás-cama",
+      "ordem": 3,
+      "descricao": "Sofás que viram cama num instante, pra receber visita sem precisar de um quarto a mais."
+    },
+    {
+      "slug": "conjuntos-e-sofas-fixos",
+      "nome": "Conjuntos e sofás fixos",
+      "ordem": 4,
+      "descricao": "Conjuntos de 2 e 3 lugares e sofás fixos, pra montar a sala completa."
+    },
+    {
+      "slug": "poltronas",
+      "nome": "Poltronas",
+      "ordem": 5,
+      "descricao": "Poltronas pra completar a sala ou criar um cantinho de leitura e descanso."
+    }
+  ],
+  "produtos": [
+    {
+      "slug": "sofa-dubai",
+      "nome": "Sofá Dubai",
+      "categoria": "sofas-retrateis",
+      "subtitulo": "Retrátil e reclinável",
+      "descricao": "Sofá retrátil e reclinável de 2,30 m, com encosto em capitonê e detalhes em madeira na base e nos braços. Os assentos deslizam para frente e o encosto reclina: aberto, ele chega a 1,80 m de profundidade.",
+      "medidas": {
+        "altura": 105,
+        "comprimento": 230,
+        "profundidade": 115,
+        "profundidadeAberto": 180
+      },
+      "pagina": 8,
+      "alt": "Sofá Dubai retrátil em tecido cinza claro, com detalhes em madeira na base",
+      "ordem": 1,
+      "fixado": 2
+    },
+    {
+      "slug": "sofa-porto-principe",
+      "nome": "Sofá Porto Príncipe",
+      "categoria": "sofas-retrateis",
+      "subtitulo": "Retrátil e reclinável",
+      "descricao": "Sofá retrátil e reclinável de 2,30 m, com encosto em capitonê, almofadas de rim e acabamento em madeira no rodapé e nos braços. Os assentos deslizam para frente e o encosto reclina: aberto, ele chega a 1,80 m de profundidade.",
+      "medidas": {
+        "altura": 105,
+        "comprimento": 230,
+        "profundidade": 115,
+        "profundidadeAberto": 180
+      },
+      "pagina": 7,
+      "alt": "Sofá Porto Príncipe retrátil em tecido cinza claro, com os assentos puxados e detalhes em madeira",
+      "ordem": 2,
+      "fixado": 1
+    },
+    {
+      "slug": "sofa-leblon",
+      "nome": "Sofá Leblon",
+      "categoria": "sofas-retrateis",
+      "subtitulo": "Retrátil e reclinável",
+      "descricao": "Sofá retrátil e reclinável de 2,30 m, com porta-copos nos braços, encosto em capitonê e almofadas de rim. Aberto, ele chega a 1,80 m de profundidade.",
+      "medidas": {
+        "altura": 105,
+        "comprimento": 230,
+        "profundidade": 115,
+        "profundidadeAberto": 180
+      },
+      "pagina": 11,
+      "alt": "Sofá Leblon retrátil em tecido fendi, com porta-copos nos braços",
+      "ordem": 3,
+      "fixado": 3
+    },
+    {
+      "slug": "sofa-montreal",
+      "nome": "Sofá Montreal",
+      "categoria": "sofas-retrateis",
+      "subtitulo": "Retrátil e reclinável",
+      "descricao": "Sofá retrátil e reclinável de 2,30 m, com encosto em gomos, almofadas de rim e braços retos. Aberto, ele chega a 1,80 m de profundidade.",
+      "medidas": {
+        "altura": 105,
+        "comprimento": 230,
+        "profundidade": 115,
+        "profundidadeAberto": 180
+      },
+      "pagina": 3,
+      "alt": "Sofá Montreal retrátil em tecido cinza claro, com os assentos puxados para frente",
+      "ordem": 4
+    },
+    {
+      "slug": "sofa-milao",
+      "nome": "Sofá Milão",
+      "categoria": "sofas-retrateis",
+      "subtitulo": "Retrátil e reclinável",
+      "descricao": "Sofá retrátil e reclinável de 2,30 m, com frisos de madeira nos braços, rodapé em madeira e encosto em capitonê. Aberto, ele chega a 1,80 m de profundidade.",
+      "medidas": {
+        "altura": 105,
+        "comprimento": 230,
+        "profundidade": 115,
+        "profundidadeAberto": 180
+      },
+      "pagina": 10,
+      "alt": "Sofá Milão retrátil em tecido bege, com frisos de madeira nos braços",
+      "ordem": 5
+    },
+    {
+      "slug": "sofa-espanha",
+      "nome": "Sofá Espanha",
+      "categoria": "sofas-retrateis",
+      "subtitulo": "Retrátil e reclinável",
+      "descricao": "Sofá retrátil e reclinável de 2,30 m, com encosto em capitonê, almofadas de rim e braços retos. Aberto, ele chega a 1,80 m de profundidade.",
+      "medidas": {
+        "altura": 105,
+        "comprimento": 230,
+        "profundidade": 115,
+        "profundidadeAberto": 180
+      },
+      "pagina": 9,
+      "alt": "Sofá Espanha retrátil em tecido grafite, com os assentos puxados para frente",
+      "ordem": 6
+    },
+    {
+      "slug": "sofa-genebra",
+      "nome": "Sofá Genebra",
+      "categoria": "sofas-retrateis",
+      "subtitulo": "Retrátil e reclinável",
+      "descricao": "Sofá retrátil e reclinável de 2,50 m, com encosto em gomos com costura aparente e braços acolchoados. Aberto, ele chega a 1,80 m de profundidade.",
+      "medidas": {
+        "altura": 105,
+        "comprimento": 250,
+        "profundidade": 115,
+        "profundidadeAberto": 180
+      },
+      "pagina": 5,
+      "alt": "Sofá Genebra retrátil em tecido taupe, com braços acolchoados",
+      "ordem": 7
+    },
+    {
+      "slug": "sofa-veneza",
+      "nome": "Sofá Veneza",
+      "categoria": "sofas-retrateis",
+      "subtitulo": "Retrátil e reclinável",
+      "descricao": "Sofá retrátil e reclinável de 2,50 m, com encosto em capitonê, almofadas de rim e braços largos. Os assentos deslizam para frente e o encosto reclina: aberto, ele chega a 1,80 m de profundidade.",
+      "medidas": {
+        "altura": 105,
+        "comprimento": 250,
+        "profundidade": 120,
+        "profundidadeAberto": 180
+      },
+      "pagina": 1,
+      "alt": "Sofá Veneza retrátil em tecido marrom, com os assentos puxados para frente",
+      "ordem": 8
+    },
+    {
+      "slug": "sofa-madrid",
+      "nome": "Sofá Madrid",
+      "categoria": "sofas-retrateis",
+      "subtitulo": "Retrátil e reclinável",
+      "descricao": "Sofá retrátil e reclinável de 2,30 m, com encosto em capitonê, almofadas de rim e braços retos. Aberto, ele chega a 1,80 m de profundidade.",
+      "medidas": {
+        "altura": 105,
+        "comprimento": 230,
+        "profundidade": 115,
+        "profundidadeAberto": 180
+      },
+      "pagina": 2,
+      "alt": "Sofá Madrid retrátil em tecido caramelo, com os assentos puxados para frente",
+      "ordem": 9
+    },
+    {
+      "slug": "sofa-londres",
+      "nome": "Sofá Londres",
+      "categoria": "sofas-retrateis",
+      "subtitulo": "Retrátil e reclinável",
+      "descricao": "Sofá retrátil e reclinável de 2,30 m, com braços acolchoados, encosto em capitonê e almofadas de rim. Aberto, ele chega a 1,80 m de profundidade.",
+      "medidas": {
+        "altura": 105,
+        "comprimento": 230,
+        "profundidade": 115,
+        "profundidadeAberto": 180
+      },
+      "pagina": 4,
+      "alt": "Sofá Londres retrátil em tecido cobre, com braços acolchoados",
+      "ordem": 10
+    },
+    {
+      "slug": "sofa-miami",
+      "nome": "Sofá Miami",
+      "categoria": "sofas-retrateis",
+      "subtitulo": "Retrátil e reclinável",
+      "descricao": "Sofá retrátil e reclinável de 2,30 m, com braços acolchoados, encosto em capitonê e almofadas de rim. Aberto, ele chega a 1,80 m de profundidade.",
+      "medidas": {
+        "altura": 105,
+        "comprimento": 230,
+        "profundidade": 115,
+        "profundidadeAberto": 180
+      },
+      "pagina": 6,
+      "alt": "Sofá Miami retrátil em tecido verde-água, com os assentos puxados para frente",
+      "ordem": 11
+    },
+    {
+      "slug": "sofa-apollo",
+      "nome": "Sofá Apollo",
+      "categoria": "sofas-de-canto",
+      "subtitulo": "Sofá de canto",
+      "descricao": "Sofá de canto de 2,50 m por 2,50 m, com encosto em capitonê, almofadas soltas e braços acolchoados.",
+      "medidas": {
+        "altura": 90,
+        "comprimento": 250,
+        "comprimentoLado": 250,
+        "profundidade": 80
+      },
+      "pagina": 14,
+      "alt": "Sofá de canto Apollo em tecido cinza claro, em formato de L",
+      "ordem": 1,
+      "fixado": 4
+    },
+    {
+      "slug": "sofa-paris",
+      "nome": "Sofá Paris",
+      "categoria": "sofas-de-canto",
+      "subtitulo": "Orgânico com chaise",
+      "descricao": "Sofá orgânico, de linhas curvas, com 2,90 m e chaise arredondada de 1,35 m de profundidade.",
+      "medidas": {
+        "altura": 95,
+        "comprimento": 290,
+        "profundidade": 90,
+        "profundidadeChaise": 135
+      },
+      "pagina": 15,
+      "alt": "Sofá orgânico Paris em tecido off-white, com chaise arredondada",
+      "ordem": 2,
+      "fixado": 5
+    },
+    {
+      "slug": "sofa-italia",
+      "nome": "Sofá Itália",
+      "categoria": "sofas-de-canto",
+      "subtitulo": "Canto com chaise",
+      "descricao": "Sofá com chaise de 2,40 m, pés de madeira e almofadas soltas no encosto. A chaise tem 1,50 m de profundidade.",
+      "medidas": {
+        "altura": 95,
+        "comprimento": 240,
+        "profundidade": 80,
+        "profundidadeChaise": 150
+      },
+      "pagina": 16,
+      "alt": "Sofá Itália com chaise em tecido ferrugem, com pés de madeira",
+      "ordem": 3,
+      "fixado": 6
+    },
+    {
+      "slug": "sofa-barcelona",
+      "nome": "Sofá Barcelona",
+      "categoria": "sofas-de-canto",
+      "subtitulo": "Sofá de canto retrátil",
+      "descricao": "Sofá de canto de 2,80 m por 2,80 m, com assentos retráteis, encosto em capitonê e braços acolchoados. Aberto, os assentos chegam a 1,75 m de profundidade.",
+      "medidas": {
+        "altura": 95,
+        "comprimento": 280,
+        "comprimentoLado": 280,
+        "profundidade": 115,
+        "profundidadeAberto": 175
+      },
+      "pagina": 12,
+      "alt": "Sofá de canto Barcelona em tecido vermelho, com braços acolchoados",
+      "ordem": 4
+    },
+    {
+      "slug": "canto-chaise-veneza",
+      "nome": "Canto Chaise Veneza",
+      "categoria": "sofas-de-canto",
+      "subtitulo": "Canto com chaise",
+      "descricao": "Sofá com chaise de 2,70 m, assentos retráteis e encosto em capitonê. Aberto, os assentos chegam a 1,75 m, e a chaise tem 1,75 m de profundidade.",
+      "medidas": {
+        "altura": 105,
+        "comprimento": 270,
+        "profundidade": 115,
+        "profundidadeAberto": 175,
+        "profundidadeChaise": 175
+      },
+      "pagina": 13,
+      "alt": "Canto Chaise Veneza em tecido fendi, com chaise e assentos retráteis",
+      "ordem": 5
+    },
+    {
+      "slug": "sofa-cama-tunisia",
+      "nome": "Sofá-cama Tunísia",
+      "categoria": "sofas-cama",
+      "subtitulo": "Sofá-cama",
+      "descricao": "Sofá-cama de 2,10 m, com braços retos e almofadas soltas. Aberto, chega a 1,35 m de profundidade.",
+      "medidas": {
+        "altura": 95,
+        "comprimento": 210,
+        "profundidade": 100,
+        "profundidadeAberto": 135
+      },
+      "pagina": 21,
+      "alt": "Sofá-cama Tunísia em tecido cinza claro, com o assento aberto",
+      "ordem": 1
+    },
+    {
+      "slug": "sofa-cama-copacabana",
+      "nome": "Sofá-cama Copacabana",
+      "categoria": "sofas-cama",
+      "subtitulo": "Sofá-cama orgânico",
+      "descricao": "Sofá-cama orgânico de 2,10 m, com braços curvos e frisos de madeira. Aberto, chega a 1,35 m de profundidade.",
+      "medidas": {
+        "altura": 95,
+        "comprimento": 210,
+        "profundidade": 100,
+        "profundidadeAberto": 135
+      },
+      "pagina": 20,
+      "alt": "Sofá-cama orgânico Copacabana em tecido bege claro, com braços curvos",
+      "ordem": 2
+    },
+    {
+      "slug": "sofa-cama-cordoba",
+      "nome": "Sofá-cama Córdoba",
+      "categoria": "sofas-cama",
+      "subtitulo": "Sofá-cama",
+      "descricao": "Sofá-cama de 2,10 m, com frisos nos braços e almofadas soltas. Aberto, chega a 1,35 m de profundidade.",
+      "medidas": {
+        "altura": 95,
+        "comprimento": 210,
+        "profundidade": 100,
+        "profundidadeAberto": 135
+      },
+      "pagina": 22,
+      "alt": "Sofá-cama Córdoba em tecido grafite, com o assento aberto",
+      "ordem": 3
+    },
+    {
+      "slug": "sofa-cama-eros",
+      "nome": "Sofá-cama Eros",
+      "categoria": "sofas-cama",
+      "subtitulo": "Sofá-cama",
+      "descricao": "Sofá-cama de 2,20 m, com braços retos e almofadas soltas. Aberto, chega a 1,35 m de profundidade.",
+      "medidas": {
+        "altura": 95,
+        "comprimento": 220,
+        "profundidade": 100,
+        "profundidadeAberto": 135
+      },
+      "pagina": 23,
+      "alt": "Sofá-cama Eros em tecido cinza claro, com o assento aberto",
+      "ordem": 4
+    },
+    {
+      "slug": "conjunto-holanda",
+      "nome": "Conjunto Holanda",
+      "categoria": "conjuntos-e-sofas-fixos",
+      "subtitulo": "Conjunto de 2 e 3 lugares",
+      "descricao": "Conjunto com um sofá de 2 lugares, de 1,40 m, e um de 3 lugares, de 1,90 m, com encosto em capitonê e braços acolchoados.",
+      "medidas": {
+        "altura": 90,
+        "profundidade": 90,
+        "pecas": [
+          {
+            "nome": "Sofá de 2 lugares",
+            "comprimento": 140
+          },
+          {
+            "nome": "Sofá de 3 lugares",
+            "comprimento": 190
+          }
+        ]
+      },
+      "pagina": 18,
+      "alt": "Conjunto Holanda de 2 e 3 lugares em tecido bege",
+      "ordem": 1
+    },
+    {
+      "slug": "conjunto-roma",
+      "nome": "Conjunto Roma",
+      "categoria": "conjuntos-e-sofas-fixos",
+      "subtitulo": "Conjunto de 2 e 3 lugares",
+      "descricao": "Conjunto com um sofá de 2 lugares, de 1,40 m, e um de 3 lugares, de 1,90 m, com encosto em capitonê e braços largos.",
+      "medidas": {
+        "altura": 90,
+        "profundidade": 90,
+        "pecas": [
+          {
+            "nome": "Sofá de 2 lugares",
+            "comprimento": 140
+          },
+          {
+            "nome": "Sofá de 3 lugares",
+            "comprimento": 190
+          }
+        ]
+      },
+      "pagina": 17,
+      "alt": "Conjunto Roma de 2 e 3 lugares em tecido azul acinzentado",
+      "ordem": 2
+    },
+    {
+      "slug": "sofa-franca",
+      "nome": "Sofá França",
+      "categoria": "conjuntos-e-sofas-fixos",
+      "subtitulo": "Sofá fixo",
+      "descricao": "Sofá fixo de 2,00 m, com pés de madeira, frisos nos braços e almofadas soltas.",
+      "medidas": {
+        "altura": 95,
+        "comprimento": 200,
+        "profundidade": 80
+      },
+      "pagina": 19,
+      "alt": "Sofá França em tecido caramelo, com pés de madeira",
+      "ordem": 3
+    },
+    {
+      "slug": "poltrona-carol",
+      "nome": "Poltrona Carol",
+      "categoria": "poltronas",
+      "subtitulo": "Poltrona",
+      "descricao": "Poltrona com braços de madeira e almofadas de assento e encosto.",
+      "medidas": {},
+      "pagina": 24,
+      "alt": "Poltrona Carol em tecido branco, com braços de madeira",
+      "ordem": 1
+    },
+    {
+      "slug": "poltrona-opalla",
+      "nome": "Poltrona Opalla",
+      "categoria": "poltronas",
+      "subtitulo": "Poltrona",
+      "descricao": "Poltrona com encosto em capitonê, braços curvos e pés de madeira.",
+      "medidas": {},
+      "pagina": 25,
+      "alt": "Poltrona Opalla em tecido creme, com pés de madeira",
+      "ordem": 2
+    }
+  ]
+}

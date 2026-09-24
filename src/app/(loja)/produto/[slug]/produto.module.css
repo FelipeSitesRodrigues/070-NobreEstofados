@@ -1,0 +1,103 @@
+.trilha {
+  padding-block: 18px;
+  font-size: var(--texto-menor);
+}
+
+.trilha ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
+
+.trilha li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--cor-texto-suave);
+}
+
+.trilha a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  color: var(--cor-texto);
+}
+
+.trilha svg {
+  width: 16px;
+  height: 16px;
+}
+
+.principal {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(28px, 4vw, 64px);
+}
+
+/*
+ * As duas colunas grudam na rolagem: a mais baixa acompanha a mais alta. Com as
+ * bolinhas de tecido, quem gruda é a foto (o sofá fica à vista enquanto a
+ * pessoa escolhe a cor); no sofá sem tecido, é o preço.
+ */
+.galeria,
+.info {
+  position: sticky;
+  top: calc(var(--altura-header) + 24px);
+}
+
+.nome {
+  font-size: clamp(2rem, 1.6rem + 1.3vw, 2.875rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.subtitulo {
+  margin: 10px 0 26px;
+  color: var(--cor-texto-suave);
+}
+
+.detalhes {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 64px);
+  margin-top: clamp(40px, 5vw, 72px);
+  padding-bottom: var(--espaco-secao);
+}
+
+.tituloDescricao {
+  font-size: clamp(1.5rem, 1.3rem + 0.6vw, 1.875rem);
+  font-weight: 500;
+}
+
+.descricao {
+  max-width: 60ch;
+  margin-top: 16px;
+}
+
+.relacionados {
+  border-top: 1px solid var(--cor-borda);
+  background: var(--cor-superficie);
+}
+
+@media (max-width: 1023px) {
+  .principal,
+  .detalhes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Foto de ponta a ponta no celular */
+  .galeria {
+    margin-inline: calc(var(--margem) * -1);
+  }
+
+  .galeria,
+  .info {
+    position: static;
+  }
+
+  .subtitulo {
+    margin-bottom: 20px;
+  }
+}

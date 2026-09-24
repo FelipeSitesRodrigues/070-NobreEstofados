@@ -1,0 +1,21 @@
+.pagina {
+  padding-block: clamp(56px, 8vw, 120px);
+}
+
+.titulo {
+  font-size: clamp(2rem, 1.6rem + 1.4vw, 3rem);
+  font-weight: 500;
+}
+
+.texto {
+  max-width: 52ch;
+  margin-top: 14px;
+  color: var(--cor-texto-suave);
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}

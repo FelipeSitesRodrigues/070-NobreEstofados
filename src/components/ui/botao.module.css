@@ -1,0 +1,143 @@
+/*
+ * Botões do site. Todos com 56 px de altura e texto dizendo a ação: o público
+ * da Nobre tem muita gente de idade, e botão pequeno ou só com ícone some.
+ *
+ * Uso: className={`${b.botao} ${b.principal}`}
+ */
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 26px;
+  border: 2px solid transparent;
+  border-radius: var(--raio-controle);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.005em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--duracao-rapida) var(--ease-suave),
+    border-color var(--duracao-rapida) var(--ease-suave),
+    color var(--duracao-rapida) var(--ease-suave),
+    box-shadow var(--duracao-media) var(--ease-saida),
+    transform var(--duracao-rapida) var(--ease-saida);
+}
+
+.botao svg {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  transition: transform var(--duracao-media) var(--ease-saida);
+}
+
+.botao:active {
+  transform: scale(0.98);
+}
+
+/* Desativado sem transparência: texto escuro sobre bege continua legível */
+.botao:disabled,
+.botao[aria-disabled='true'] {
+  border-color: var(--cor-bege-quente);
+  background: var(--cor-bege-quente);
+  color: var(--cor-texto);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Seta anda um pouco no hover: diz "vai pra outra página" */
+@media (hover: hover) {
+  .botao:hover .seta {
+    transform: translateX(4px);
+  }
+}
+
+.principal {
+  background: var(--cor-madeira);
+  border-color: var(--cor-madeira);
+  color: #fff;
+  box-shadow: 0 1px 2px rgba(58, 41, 32, 0.18);
+}
+
+@media (hover: hover) {
+  .principal:hover {
+    background: var(--cor-madeira-hover);
+    border-color: var(--cor-madeira-hover);
+    box-shadow: 0 10px 22px -12px rgba(58, 41, 32, 0.55);
+  }
+}
+
+.contorno {
+  background: var(--cor-superficie);
+  border-color: var(--cor-borda);
+  color: var(--cor-texto);
+}
+
+@media (hover: hover) {
+  .contorno:hover {
+    border-color: var(--cor-taupe);
+    background: #fff;
+  }
+}
+
+/* Acento champagne, só no banner escuro */
+.acento {
+  background: var(--cor-acento);
+  border-color: var(--cor-acento);
+  color: var(--cor-texto);
+}
+
+@media (hover: hover) {
+  .acento:hover {
+    background: var(--cor-bege-quente);
+    border-color: var(--cor-bege-quente);
+  }
+}
+
+.largo {
+  width: 100%;
+}
+
+/* Texto que pode quebrar em duas linhas (card estreito no celular) */
+.quebra {
+  white-space: normal;
+}
+
+/* Link com seta: "Ver todos os modelos" */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--cor-madeira);
+  font-size: var(--texto-menor);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link svg {
+  width: 20px;
+  height: 20px;
+  transition: transform var(--duracao-media) var(--ease-saida);
+}
+
+@media (hover: hover) {
+  .link:hover {
+    text-decoration: underline;
+  }
+
+  .link:hover svg {
+    transform: translateX(4px);
+  }
+}
+
+:global(.escuro) .link {
+  color: var(--cor-acento);
+}

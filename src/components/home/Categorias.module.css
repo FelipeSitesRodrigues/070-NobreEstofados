@@ -1,0 +1,93 @@
+.lista {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(12px, 1.4vw, 20px);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--cor-linha-escura);
+  border-radius: var(--raio);
+  background: rgba(250, 248, 244, 0.05);
+  overflow: hidden;
+  text-decoration: none;
+  transition:
+    border-color var(--duracao-media) var(--ease-suave),
+    background-color var(--duracao-media) var(--ease-suave),
+    translate var(--duracao-media) var(--ease-saida);
+}
+
+.foto {
+  display: block;
+  aspect-ratio: 16 / 11;
+  background: var(--cor-nogueira);
+  overflow: hidden;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale 700ms var(--ease-saida);
+}
+
+.painel {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  padding: 16px 12px 18px;
+  text-align: center;
+}
+
+.nome {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.quantidade {
+  color: var(--cor-no-escuro-suave);
+  font-size: var(--texto-menor);
+}
+
+@media (hover: hover) {
+  .card:hover {
+    border-color: rgba(207, 193, 176, 0.55);
+    background: rgba(250, 248, 244, 0.09);
+    translate: 0 -3px;
+  }
+
+  .card:hover img {
+    scale: 1.05;
+  }
+}
+
+/* Tablet e celular: fileira que desliza, com o próximo card aparecendo na borda */
+@media (max-width: 1023px) {
+  .lista {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(230px, 31%);
+    margin-inline: calc(var(--margem) * -1);
+    padding-inline: var(--margem);
+    padding-bottom: 8px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--margem);
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-taupe) transparent;
+  }
+
+  .lista > li {
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 639px) {
+  .lista {
+    grid-auto-columns: 68%;
+  }
+}

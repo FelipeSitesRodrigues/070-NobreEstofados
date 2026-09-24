@@ -1,0 +1,224 @@
+[
+  {
+    "codigo": "veludo-102",
+    "nome": "Veludo 102",
+    "linha": "veludo",
+    "fundo": "#989888"
+  },
+  {
+    "codigo": "veludo-103",
+    "nome": "Veludo 103",
+    "linha": "veludo",
+    "fundo": "#787868"
+  },
+  {
+    "codigo": "veludo-105",
+    "nome": "Veludo 105",
+    "linha": "veludo",
+    "fundo": "#980828"
+  },
+  {
+    "codigo": "veludo-107",
+    "nome": "Veludo 107",
+    "linha": "veludo",
+    "fundo": "#886848"
+  },
+  {
+    "codigo": "veludo-108",
+    "nome": "Veludo 108",
+    "linha": "veludo",
+    "fundo": "#885848"
+  },
+  {
+    "codigo": "veludo-110",
+    "nome": "Veludo 110",
+    "linha": "veludo",
+    "fundo": "#686868"
+  },
+  {
+    "codigo": "veludo-111",
+    "nome": "Veludo 111",
+    "linha": "veludo",
+    "fundo": "#384838"
+  },
+  {
+    "codigo": "veludo-112",
+    "nome": "Veludo 112",
+    "linha": "veludo",
+    "fundo": "#686858"
+  },
+  {
+    "codigo": "veludo-113",
+    "nome": "Veludo 113",
+    "linha": "veludo",
+    "fundo": "#383838"
+  },
+  {
+    "codigo": "veludo-114",
+    "nome": "Veludo 114",
+    "linha": "veludo",
+    "fundo": "#b89888"
+  },
+  {
+    "codigo": "veludo-115",
+    "nome": "Veludo 115",
+    "linha": "veludo",
+    "fundo": "#a89888"
+  },
+  {
+    "codigo": "veludo-116",
+    "nome": "Veludo 116",
+    "linha": "veludo",
+    "fundo": "#988878"
+  },
+  {
+    "codigo": "veludo-117",
+    "nome": "Veludo 117",
+    "linha": "veludo",
+    "fundo": "#685848"
+  },
+  {
+    "codigo": "veludo-120",
+    "nome": "Veludo 120",
+    "linha": "veludo",
+    "fundo": "#985828"
+  },
+  {
+    "codigo": "veludo-124",
+    "nome": "Veludo 124",
+    "linha": "veludo",
+    "fundo": "#284858"
+  },
+  {
+    "codigo": "veludo-126",
+    "nome": "Veludo 126",
+    "linha": "veludo",
+    "fundo": "#a8a898"
+  },
+  {
+    "codigo": "linho-302",
+    "nome": "Linho 302",
+    "linha": "linho",
+    "fundo": "#686868"
+  },
+  {
+    "codigo": "linho-303",
+    "nome": "Linho 303",
+    "linha": "linho",
+    "fundo": "#686868"
+  },
+  {
+    "codigo": "linho-304",
+    "nome": "Linho 304",
+    "linha": "linho",
+    "fundo": "#686868"
+  },
+  {
+    "codigo": "linho-305",
+    "nome": "Linho 305",
+    "linha": "linho",
+    "fundo": "#686868"
+  },
+  {
+    "codigo": "linho-306",
+    "nome": "Linho 306",
+    "linha": "linho",
+    "fundo": "#686868"
+  },
+  {
+    "codigo": "linho-308",
+    "nome": "Linho 308",
+    "linha": "linho",
+    "fundo": "#686868"
+  },
+  {
+    "codigo": "linho-311",
+    "nome": "Linho 311",
+    "linha": "linho",
+    "fundo": "#081828"
+  },
+  {
+    "codigo": "linho-312",
+    "nome": "Linho 312",
+    "linha": "linho",
+    "fundo": "#686868"
+  },
+  {
+    "codigo": "linho-313",
+    "nome": "Linho 313",
+    "linha": "linho",
+    "fundo": "#686868"
+  },
+  {
+    "codigo": "linho-314",
+    "nome": "Linho 314",
+    "linha": "linho",
+    "fundo": "#686868"
+  },
+  {
+    "codigo": "veludo-premium-501",
+    "nome": "Veludo Premium 501",
+    "linha": "premium",
+    "fundo": "#d8d8c8"
+  },
+  {
+    "codigo": "veludo-premium-502",
+    "nome": "Veludo Premium 502",
+    "linha": "premium",
+    "fundo": "#a8a898"
+  },
+  {
+    "codigo": "veludo-premium-503",
+    "nome": "Veludo Premium 503",
+    "linha": "premium",
+    "fundo": "#a89888"
+  },
+  {
+    "codigo": "veludo-premium-504",
+    "nome": "Veludo Premium 504",
+    "linha": "premium",
+    "fundo": "#989898"
+  },
+  {
+    "codigo": "veludo-premium-505",
+    "nome": "Veludo Premium 505",
+    "linha": "premium",
+    "fundo": "#787868"
+  },
+  {
+    "codigo": "veludo-premium-506",
+    "nome": "Veludo Premium 506",
+    "linha": "premium",
+    "fundo": "#786858"
+  },
+  {
+    "codigo": "veludo-premium-507",
+    "nome": "Veludo Premium 507",
+    "linha": "premium",
+    "fundo": "#783818"
+  },
+  {
+    "codigo": "linho-premium-508",
+    "nome": "Linho Premium 508",
+    "linha": "premium",
+    "fundo": "#686868"
+  },
+  {
+    "codigo": "linho-premium-509",
+    "nome": "Linho Premium 509",
+    "linha": "premium",
+    "fundo": "#686868"
+  },
+  {
+    "codigo": "linho-premium-510",
+    "nome": "Linho Premium 510",
+    "linha": "premium",
+    "fundo": "#686868"
+  },
+  {
+    "codigo": "linho-premium-511",
+    "nome": "Linho Premium 511",
+    "linha": "premium",
+    "fundo": "#283828"
+  }
+]

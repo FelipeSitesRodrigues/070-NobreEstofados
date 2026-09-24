@@ -1,0 +1,48 @@
+.botao {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: var(--z-flutuante);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 22px 0 18px;
+  border-radius: 28px;
+  background: var(--cor-madeira);
+  color: #fff;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--sombra-flutuante);
+  /* Escondido no topo da página; aparece quando a pessoa rola (WhatsFlutuante.tsx) */
+  opacity: 0;
+  translate: 0 16px;
+  visibility: hidden;
+  transition:
+    opacity var(--duracao-media) var(--ease-saida),
+    translate var(--duracao-media) var(--ease-saida),
+    visibility var(--duracao-media) allow-discrete,
+    background-color var(--duracao-rapida) var(--ease-suave);
+}
+
+.botao[data-visivel] {
+  opacity: 1;
+  translate: 0 0;
+  visibility: visible;
+}
+
+.botao svg {
+  width: 28px;
+  height: 28px;
+}
+
+@media (hover: hover) {
+  .botao:hover {
+    background: var(--cor-madeira-hover);
+  }
+}
+
+.botao:active {
+  scale: 0.97;
+}

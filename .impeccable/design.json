@@ -1,0 +1,627 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-22T14:14:06.929Z",
+  "title": "Design System: Nobre Estofados",
+  "extensions": {
+    "colorMeta": {
+      "cor-madeira": {
+        "role": "primary",
+        "displayName": "Madeira de Ação",
+        "canonical": "#7a5e44",
+        "tonalRamp": [
+          "oklch(15% 0.053 64.0)",
+          "oklch(26% 0.053 64.0)",
+          "oklch(38% 0.053 64.0)",
+          "oklch(50% 0.053 64.0)",
+          "oklch(62% 0.053 64.0)",
+          "oklch(74% 0.053 64.0)",
+          "oklch(85% 0.053 64.0)",
+          "oklch(95% 0.053 64.0)"
+        ]
+      },
+      "cor-madeira-hover": {
+        "role": "primary",
+        "displayName": "Madeira de Ação, hover",
+        "canonical": "#654c36",
+        "tonalRamp": [
+          "oklch(15% 0.048 62.4)",
+          "oklch(26% 0.048 62.4)",
+          "oklch(38% 0.048 62.4)",
+          "oklch(50% 0.048 62.4)",
+          "oklch(62% 0.048 62.4)",
+          "oklch(74% 0.048 62.4)",
+          "oklch(85% 0.048 62.4)",
+          "oklch(95% 0.048 62.4)"
+        ]
+      },
+      "cor-acento": {
+        "role": "secondary",
+        "displayName": "Champanhe",
+        "canonical": "#b89a72",
+        "tonalRamp": [
+          "oklch(15% 0.065 74.4)",
+          "oklch(26% 0.065 74.4)",
+          "oklch(38% 0.065 74.4)",
+          "oklch(50% 0.065 74.4)",
+          "oklch(62% 0.065 74.4)",
+          "oklch(74% 0.065 74.4)",
+          "oklch(85% 0.065 74.4)",
+          "oklch(95% 0.065 74.4)"
+        ]
+      },
+      "cor-fundo": {
+        "role": "neutral",
+        "displayName": "Creme de Parede",
+        "canonical": "#f3efe7",
+        "tonalRamp": [
+          "oklch(15% 0.011 84.6)",
+          "oklch(26% 0.011 84.6)",
+          "oklch(38% 0.011 84.6)",
+          "oklch(50% 0.011 84.6)",
+          "oklch(62% 0.011 84.6)",
+          "oklch(74% 0.011 84.6)",
+          "oklch(85% 0.011 84.6)",
+          "oklch(95% 0.011 84.6)"
+        ]
+      },
+      "cor-superficie": {
+        "role": "neutral",
+        "displayName": "Off-white de Estofado",
+        "canonical": "#faf8f4",
+        "tonalRamp": [
+          "oklch(15% 0.006 84.6)",
+          "oklch(26% 0.006 84.6)",
+          "oklch(38% 0.006 84.6)",
+          "oklch(50% 0.006 84.6)",
+          "oklch(62% 0.006 84.6)",
+          "oklch(74% 0.006 84.6)",
+          "oklch(85% 0.006 84.6)",
+          "oklch(95% 0.006 84.6)"
+        ]
+      },
+      "cor-bege": {
+        "role": "neutral",
+        "displayName": "Bege de Linho",
+        "canonical": "#e8e1d6",
+        "tonalRamp": [
+          "oklch(15% 0.017 79.3)",
+          "oklch(26% 0.017 79.3)",
+          "oklch(38% 0.017 79.3)",
+          "oklch(50% 0.017 79.3)",
+          "oklch(62% 0.017 79.3)",
+          "oklch(74% 0.017 79.3)",
+          "oklch(85% 0.017 79.3)",
+          "oklch(95% 0.017 79.3)"
+        ]
+      },
+      "cor-bege-quente": {
+        "role": "neutral",
+        "displayName": "Bege Quente",
+        "canonical": "#cfc1b0",
+        "tonalRamp": [
+          "oklch(15% 0.028 72.8)",
+          "oklch(26% 0.028 72.8)",
+          "oklch(38% 0.028 72.8)",
+          "oklch(50% 0.028 72.8)",
+          "oklch(62% 0.028 72.8)",
+          "oklch(74% 0.028 72.8)",
+          "oklch(85% 0.028 72.8)",
+          "oklch(95% 0.028 72.8)"
+        ]
+      },
+      "cor-borda": {
+        "role": "neutral",
+        "displayName": "Linha de Costura",
+        "canonical": "#d7d0c5",
+        "tonalRamp": [
+          "oklch(15% 0.017 79.3)",
+          "oklch(26% 0.017 79.3)",
+          "oklch(38% 0.017 79.3)",
+          "oklch(50% 0.017 79.3)",
+          "oklch(62% 0.017 79.3)",
+          "oklch(74% 0.017 79.3)",
+          "oklch(85% 0.017 79.3)",
+          "oklch(95% 0.017 79.3)"
+        ]
+      },
+      "cor-marrom": {
+        "role": "neutral",
+        "displayName": "Madeira Escura",
+        "canonical": "#3a2920",
+        "tonalRamp": [
+          "oklch(15% 0.030 49.1)",
+          "oklch(26% 0.030 49.1)",
+          "oklch(38% 0.030 49.1)",
+          "oklch(50% 0.030 49.1)",
+          "oklch(62% 0.030 49.1)",
+          "oklch(74% 0.030 49.1)",
+          "oklch(85% 0.030 49.1)",
+          "oklch(95% 0.030 49.1)"
+        ]
+      },
+      "cor-nogueira": {
+        "role": "neutral",
+        "displayName": "Nogueira",
+        "canonical": "#4a3428",
+        "tonalRamp": [
+          "oklch(15% 0.038 49.7)",
+          "oklch(26% 0.038 49.7)",
+          "oklch(38% 0.038 49.7)",
+          "oklch(50% 0.038 49.7)",
+          "oklch(62% 0.038 49.7)",
+          "oklch(74% 0.038 49.7)",
+          "oklch(85% 0.038 49.7)",
+          "oklch(95% 0.038 49.7)"
+        ]
+      },
+      "cor-taupe": {
+        "role": "neutral",
+        "displayName": "Taupe",
+        "canonical": "#81766a",
+        "tonalRamp": [
+          "oklch(15% 0.023 69.8)",
+          "oklch(26% 0.023 69.8)",
+          "oklch(38% 0.023 69.8)",
+          "oklch(50% 0.023 69.8)",
+          "oklch(62% 0.023 69.8)",
+          "oklch(74% 0.023 69.8)",
+          "oklch(85% 0.023 69.8)",
+          "oklch(95% 0.023 69.8)"
+        ]
+      },
+      "cor-texto": {
+        "role": "neutral",
+        "displayName": "Grafite Quente",
+        "canonical": "#1c1b19",
+        "tonalRamp": [
+          "oklch(15% 0.004 84.6)",
+          "oklch(26% 0.004 84.6)",
+          "oklch(38% 0.004 84.6)",
+          "oklch(50% 0.004 84.6)",
+          "oklch(62% 0.004 84.6)",
+          "oklch(74% 0.004 84.6)",
+          "oklch(85% 0.004 84.6)",
+          "oklch(95% 0.004 84.6)"
+        ]
+      },
+      "cor-texto-suave": {
+        "role": "neutral",
+        "displayName": "Marrom Acinzentado",
+        "canonical": "#6e6961",
+        "tonalRamp": [
+          "oklch(15% 0.014 79.7)",
+          "oklch(26% 0.014 79.7)",
+          "oklch(38% 0.014 79.7)",
+          "oklch(50% 0.014 79.7)",
+          "oklch(62% 0.014 79.7)",
+          "oklch(74% 0.014 79.7)",
+          "oklch(85% 0.014 79.7)",
+          "oklch(95% 0.014 79.7)"
+        ]
+      },
+      "cor-no-escuro": {
+        "role": "neutral",
+        "displayName": "Creme no Escuro",
+        "canonical": "#f3efe7",
+        "tonalRamp": [
+          "oklch(15% 0.011 84.6)",
+          "oklch(26% 0.011 84.6)",
+          "oklch(38% 0.011 84.6)",
+          "oklch(50% 0.011 84.6)",
+          "oklch(62% 0.011 84.6)",
+          "oklch(74% 0.011 84.6)",
+          "oklch(85% 0.011 84.6)",
+          "oklch(95% 0.011 84.6)"
+        ]
+      },
+      "cor-no-escuro-suave": {
+        "role": "neutral",
+        "displayName": "Bege no Escuro",
+        "canonical": "#cfc1b0",
+        "tonalRamp": [
+          "oklch(15% 0.028 72.8)",
+          "oklch(26% 0.028 72.8)",
+          "oklch(38% 0.028 72.8)",
+          "oklch(50% 0.028 72.8)",
+          "oklch(62% 0.028 72.8)",
+          "oklch(74% 0.028 72.8)",
+          "oklch(85% 0.028 72.8)",
+          "oklch(95% 0.028 72.8)"
+        ]
+      },
+      "cor-linha-escura": {
+        "role": "neutral",
+        "displayName": "Linha no Escuro",
+        "canonical": "rgba(207, 193, 176, 0.22)",
+        "tonalRamp": [
+          "oklch(15% 0.028 72.8)",
+          "oklch(26% 0.028 72.8)",
+          "oklch(38% 0.028 72.8)",
+          "oklch(50% 0.028 72.8)",
+          "oklch(62% 0.028 72.8)",
+          "oklch(74% 0.028 72.8)",
+          "oklch(85% 0.028 72.8)",
+          "oklch(95% 0.028 72.8)"
+        ]
+      },
+      "cor-sucesso": {
+        "role": "status",
+        "displayName": "Verde de Estoque",
+        "canonical": "#3f7a4f",
+        "tonalRamp": [
+          "oklch(15% 0.092 151.0)",
+          "oklch(26% 0.092 151.0)",
+          "oklch(38% 0.092 151.0)",
+          "oklch(50% 0.092 151.0)",
+          "oklch(62% 0.092 151.0)",
+          "oklch(74% 0.092 151.0)",
+          "oklch(85% 0.092 151.0)",
+          "oklch(95% 0.092 151.0)"
+        ]
+      },
+      "cor-alerta": {
+        "role": "status",
+        "displayName": "Tijolo",
+        "canonical": "#9a3b2e",
+        "tonalRamp": [
+          "oklch(15% 0.130 30.3)",
+          "oklch(26% 0.130 30.3)",
+          "oklch(38% 0.130 30.3)",
+          "oklch(50% 0.130 30.3)",
+          "oklch(62% 0.130 30.3)",
+          "oklch(74% 0.130 30.3)",
+          "oklch(85% 0.130 30.3)",
+          "oklch(95% 0.130 30.3)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "titulo-hero": {
+        "displayName": "Display do hero",
+        "purpose": "Só o h1 do hero, em três linhas a partir de 1024px e com quebra livre no celular."
+      },
+      "titulo-pagina": {
+        "displayName": "Título de página",
+        "purpose": "h1 da loja, do carrinho, da política e da página de erro. Valor repetido nos módulos, sem variável no globals.css."
+      },
+      "titulo-secao": {
+        "displayName": "Título de seção",
+        "purpose": "O h2 de cada seção, à esquerda, com o link \"Ver todos\" à direita quando há."
+      },
+      "titulo-card": {
+        "displayName": "Nome do card",
+        "purpose": "Nome do sofá no card e no carrinho."
+      },
+      "preco": {
+        "displayName": "Preço",
+        "purpose": "Preço do card e total do carrinho, com números tabulares."
+      },
+      "texto-grande": {
+        "displayName": "Texto grande",
+        "purpose": "Subtítulo do hero; em 600 e 700, título de caixa e número do WhatsApp no rodapé."
+      },
+      "texto-corpo": {
+        "displayName": "Corpo",
+        "purpose": "Todo texto corrido, de 18 a 20px, com 60 a 62 caracteres por linha."
+      },
+      "texto-menor": {
+        "displayName": "Texto menor",
+        "purpose": "O piso de 16px: tipo e largura do card, parcelas, notas, selos, faixa do topo."
+      },
+      "rotulo": {
+        "displayName": "Rótulo",
+        "purpose": "Texto de botão, 17px 600. Sem variável própria: escrito no botao.module.css."
+      },
+      "rotulo-icone": {
+        "displayName": "Rótulo de ícone",
+        "purpose": "A exceção de 14px: palavra embaixo dos ícones do cabeçalho e contador do carrinho, só abaixo de 1180px."
+      },
+      "frase-destaque": {
+        "displayName": "Frase serifada",
+        "purpose": "A única serifada: a frase do banner, em itálico (font-style: italic, que o frontmatter não carrega), só a partir de 1024px."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sombra-card",
+        "value": "0 1px 2px rgba(58, 41, 32, 0.05), 0 10px 28px -14px rgba(58, 41, 32, 0.2)",
+        "purpose": "Card de produto e resumo do carrinho, em repouso."
+      },
+      {
+        "name": "sombra-card-alta",
+        "value": "0 2px 6px rgba(58, 41, 32, 0.06), 0 24px 48px -20px rgba(58, 41, 32, 0.32)",
+        "purpose": "Hover do card (com 3px de subida), retrato do Sobre e aviso do carrinho."
+      },
+      {
+        "name": "sombra-flutuante",
+        "value": "0 6px 18px -6px rgba(28, 20, 15, 0.35), 0 2px 6px rgba(28, 20, 15, 0.15)",
+        "purpose": "WhatsApp flutuante."
+      },
+      {
+        "name": "botao-principal",
+        "value": "0 1px 2px rgba(58, 41, 32, 0.18)",
+        "purpose": "Botão principal parado."
+      },
+      {
+        "name": "botao-principal-hover",
+        "value": "0 10px 22px -12px rgba(58, 41, 32, 0.55)",
+        "purpose": "Botão principal no hover."
+      },
+      {
+        "name": "cabecalho-rolagem",
+        "value": "0 10px 30px -18px rgba(58, 41, 32, 0.35)",
+        "purpose": "Cabeçalho depois dos primeiros 120px de rolagem (animação ligada à rolagem)."
+      },
+      {
+        "name": "gaveta-menu",
+        "value": "18px 0 48px -24px rgba(28, 20, 15, 0.5)",
+        "purpose": "Menu do celular, saindo do lado que abre."
+      },
+      {
+        "name": "barra-compra",
+        "value": "0 -12px 30px -20px rgba(28, 20, 15, 0.45)",
+        "purpose": "Barra fixa de compra no celular, sombra pra cima."
+      },
+      {
+        "name": "anel-campo",
+        "value": "0 0 0 3px rgba(122, 94, 68, 0.18)",
+        "purpose": "Foco do campo de busca, junto com a borda madeira (0.2 na loja)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-saida",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Entrada, subida, revelação e sombra."
+      },
+      {
+        "name": "ease-suave",
+        "value": "cubic-bezier(0.33, 1, 0.68, 1)",
+        "purpose": "Troca de cor e de borda."
+      },
+      {
+        "name": "duracao-rapida",
+        "value": "160ms",
+        "purpose": "Cor e borda de botão, campo e chip."
+      },
+      {
+        "name": "duracao-media",
+        "value": "260ms",
+        "purpose": "Sombra, seta, fio do menu, gaveta e WhatsApp flutuante."
+      },
+      {
+        "name": "duracao-revelar",
+        "value": "720ms",
+        "purpose": "Revelar ao rolar (data-revelar): opacidade zero e 18px abaixo, nunca clip-path."
+      },
+      {
+        "name": "entrada-hero",
+        "value": "scale 1.06 para 1 em 1600ms; texto sobe 16px em 700ms, 90ms entre blocos",
+        "purpose": "A foto do hero assenta e o texto sobe em sequência."
+      },
+      {
+        "name": "foto-card",
+        "value": "scale 1.035 em 700ms",
+        "purpose": "A foto do card cresce no hover."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "celular",
+        "value": "480px"
+      },
+      {
+        "name": "celular-largo",
+        "value": "640px"
+      },
+      {
+        "name": "tablet",
+        "value": "768px"
+      },
+      {
+        "name": "tablet-largo",
+        "value": "1024px"
+      },
+      {
+        "name": "desktop",
+        "value": "1180px"
+      },
+      {
+        "name": "desktop-largo",
+        "value": "1440px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão principal",
+      "kind": "button",
+      "refersTo": "button-principal",
+      "description": "Madeira com texto branco, 56px e a ação escrita; a seta anda 4px no hover. Toda ação principal da loja.",
+      "html": "<a class=\"ds-btn-principal\" href=\"#\">Ver os sofás<svg aria-hidden=\"true\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z\"/></svg></a>",
+      "css": ".ds-btn-principal { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 0 26px; border: 2px solid transparent; border-radius: var(--raio-controle, 8px); font-family: var(--fonte, 'Montserrat', system-ui, sans-serif); font-size: 1.0625rem; font-weight: 600; line-height: 1.2; letter-spacing: 0.005em; text-decoration: none; white-space: nowrap; cursor: pointer; transition: background-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), border-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), box-shadow var(--duracao-media, 260ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)), transform var(--duracao-rapida, 160ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-btn-principal svg { flex: none; width: 22px; height: 22px; transition: transform var(--duracao-media, 260ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-btn-principal:active { transform: scale(0.98); }\n.ds-btn-principal { background: var(--cor-madeira, #7a5e44); border-color: var(--cor-madeira, #7a5e44); color: #fff; box-shadow: 0 1px 2px rgba(58, 41, 32, 0.18); }\n.ds-btn-principal:hover { background: var(--cor-madeira-hover, #654c36); border-color: var(--cor-madeira-hover, #654c36); box-shadow: 0 10px 22px -12px rgba(58, 41, 32, 0.55); }\n.ds-btn-principal:hover svg { transform: translateX(4px); }\n.ds-btn-principal:focus-visible { outline: 3px solid var(--cor-madeira, #7a5e44); outline-offset: 3px; }"
+    },
+    {
+      "name": "Botão contorno",
+      "kind": "button",
+      "refersTo": "button-contorno",
+      "description": "O par do principal: off-white, borda de costura e texto grafite. \"Perguntar no WhatsApp\" no card, \"Adicionar ao carrinho\" no produto.",
+      "html": "<a class=\"ds-btn-contorno\" href=\"#\"><svg aria-hidden=\"true\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M152.58,145.23l23,11.48A24,24,0,0,1,152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155ZM232,128A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-40,24a8,8,0,0,0-4.42-7.16l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88A40,40,0,0,0,192,152Z\"/></svg>Perguntar no WhatsApp</a>",
+      "css": ".ds-btn-contorno { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 0 26px; border: 2px solid transparent; border-radius: var(--raio-controle, 8px); font-family: var(--fonte, 'Montserrat', system-ui, sans-serif); font-size: 1.0625rem; font-weight: 600; line-height: 1.2; letter-spacing: 0.005em; text-decoration: none; white-space: nowrap; cursor: pointer; transition: background-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), border-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), box-shadow var(--duracao-media, 260ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)), transform var(--duracao-rapida, 160ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-btn-contorno svg { flex: none; width: 22px; height: 22px; transition: transform var(--duracao-media, 260ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-btn-contorno:active { transform: scale(0.98); }\n.ds-btn-contorno { background: var(--cor-superficie, #faf8f4); border-color: var(--cor-borda, #d7d0c5); color: var(--cor-texto, #1c1b19); }\n.ds-btn-contorno:hover { border-color: var(--cor-taupe, #81766a); background: #fff; }\n.ds-btn-contorno:focus-visible { outline: 3px solid var(--cor-madeira, #7a5e44); outline-offset: 3px; }"
+    },
+    {
+      "name": "Botão champanhe (seção marrom)",
+      "kind": "button",
+      "refersTo": "button-acento",
+      "description": "A madeira dentro do escuro: champanhe com texto grafite, só em seção marrom (hoje, o banner). Foco em champanhe.",
+      "html": "<div class=\"ds-secao-escura\"><a class=\"ds-btn-acento\" href=\"#\">Conheça a coleção<svg aria-hidden=\"true\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z\"/></svg></a></div>",
+      "css": ".ds-secao-escura { padding: 32px; background: radial-gradient(120% 90% at 100% 0%, rgba(184, 154, 114, 0.1), transparent 55%), var(--cor-marrom, #3a2920); }\n.ds-btn-acento { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 0 26px; border: 2px solid transparent; border-radius: var(--raio-controle, 8px); font-family: var(--fonte, 'Montserrat', system-ui, sans-serif); font-size: 1.0625rem; font-weight: 600; line-height: 1.2; letter-spacing: 0.005em; text-decoration: none; white-space: nowrap; cursor: pointer; transition: background-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), border-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), box-shadow var(--duracao-media, 260ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)), transform var(--duracao-rapida, 160ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-btn-acento svg { flex: none; width: 22px; height: 22px; transition: transform var(--duracao-media, 260ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-btn-acento:active { transform: scale(0.98); }\n.ds-btn-acento { background: var(--cor-acento, #b89a72); border-color: var(--cor-acento, #b89a72); color: var(--cor-texto, #1c1b19); }\n.ds-btn-acento:hover { background: var(--cor-bege-quente, #cfc1b0); border-color: var(--cor-bege-quente, #cfc1b0); }\n.ds-btn-acento:hover svg { transform: translateX(4px); }\n.ds-btn-acento:focus-visible { outline: 3px solid var(--cor-acento, #b89a72); outline-offset: 3px; }"
+    },
+    {
+      "name": "WhatsApp flutuante",
+      "kind": "custom",
+      "refersTo": "whats-flutuante",
+      "description": "Pílula de 56px fixa no canto inferior direito (aqui sem position: fixed, pra caber no painel). Aparece depois de 320px de rolagem e some no produto e no carrinho.",
+      "html": "<a class=\"ds-whats-flutuante\" href=\"#\"><svg aria-hidden=\"true\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M152.58,145.23l23,11.48A24,24,0,0,1,152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155ZM232,128A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-40,24a8,8,0,0,0-4.42-7.16l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88A40,40,0,0,0,192,152Z\"/></svg><span>WhatsApp</span></a>",
+      "css": ".ds-whats-flutuante { display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 22px 0 18px; border-radius: 28px; background: var(--cor-madeira, #7a5e44); color: #fff; font-family: var(--fonte, 'Montserrat', system-ui, sans-serif); font-size: 1.0625rem; font-weight: 600; text-decoration: none; box-shadow: var(--sombra-flutuante, 0 6px 18px -6px rgba(28, 20, 15, 0.35), 0 2px 6px rgba(28, 20, 15, 0.15)); transition: background-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), scale var(--duracao-rapida, 160ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-whats-flutuante svg { width: 28px; height: 28px; }\n.ds-whats-flutuante:hover { background: var(--cor-madeira-hover, #654c36); }\n.ds-whats-flutuante:focus-visible { outline: 3px solid var(--cor-madeira, #7a5e44); outline-offset: 3px; }\n.ds-whats-flutuante:active { scale: 0.97; }"
+    },
+    {
+      "name": "Card de produto",
+      "kind": "card",
+      "refersTo": "card-produto",
+      "description": "Foto 16:9 sobre bege, nome, tipo e largura, preço ou \"Consulte o valor no WhatsApp\", e o par de botões. Sobe 3px no hover. A foto real entra no bloco bege.",
+      "html": "<article class=\"ds-card-produto\">\n  <a class=\"ds-card-foto\" href=\"#\" tabindex=\"-1\" aria-hidden=\"true\"></a>\n  <div class=\"ds-card-corpo\">\n    <h3 class=\"ds-card-nome\"><a href=\"#\">Sofá Porto Príncipe</a></h3>\n    <p class=\"ds-card-tipo\">Retrátil e reclinável · 2,30 m</p>\n    <p class=\"ds-card-consulte\">Consulte o valor no WhatsApp</p>\n    <div class=\"ds-card-acoes\">\n      <a class=\"ds-card-ver\" href=\"#\">Ver este sofá</a>\n      <a class=\"ds-card-whats\" href=\"#\"><svg aria-hidden=\"true\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M152.58,145.23l23,11.48A24,24,0,0,1,152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155ZM232,128A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-40,24a8,8,0,0,0-4.42-7.16l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88A40,40,0,0,0,192,152Z\"/></svg>Perguntar no WhatsApp</a>\n    </div>\n  </div>\n</article>",
+      "css": ".ds-card-produto { container-type: inline-size; display: flex; flex-direction: column; max-width: 420px; border: 1px solid var(--cor-borda, #d7d0c5); border-radius: var(--raio, 12px); background: var(--cor-superficie, #faf8f4); color: var(--cor-texto, #1c1b19); font-family: var(--fonte, 'Montserrat', system-ui, sans-serif); box-shadow: var(--sombra-card, 0 1px 2px rgba(58, 41, 32, 0.05), 0 10px 28px -14px rgba(58, 41, 32, 0.2)); overflow: hidden; transition: box-shadow var(--duracao-media, 260ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)), translate var(--duracao-media, 260ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-card-produto:hover { box-shadow: var(--sombra-card-alta, 0 2px 6px rgba(58, 41, 32, 0.06), 0 24px 48px -20px rgba(58, 41, 32, 0.32)); translate: 0 -3px; }\n.ds-card-foto { display: block; aspect-ratio: 16 / 9; background: var(--cor-bege, #e8e1d6); }\n.ds-card-corpo { display: flex; flex-direction: column; padding: 18px 20px 20px; }\n.ds-card-nome { margin: 0; font-size: var(--titulo-card, clamp(1.25rem, 1.18rem + 0.3vw, 1.4375rem)); font-weight: 700; line-height: 1.25; letter-spacing: -0.005em; }\n.ds-card-nome a { color: inherit; text-decoration: none; }\n.ds-card-nome a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.2em; }\n.ds-card-tipo { margin: 4px 0 0; color: var(--cor-texto-suave, #6e6961); font-size: var(--texto-menor, 1rem); }\n.ds-card-consulte { margin: 12px 0 0; color: var(--cor-madeira, #7a5e44); font-size: 1.125rem; font-weight: 600; }\n.ds-card-acoes { display: grid; gap: 10px; padding-top: 18px; }\n.ds-card-ver, .ds-card-whats { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 0 16px; border: 2px solid transparent; border-radius: var(--raio-controle, 8px); font-size: 1.0625rem; font-weight: 600; line-height: 1.2; text-decoration: none; white-space: nowrap; transition: background-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), border-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), transform var(--duracao-rapida, 160ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-card-ver { background: var(--cor-madeira, #7a5e44); border-color: var(--cor-madeira, #7a5e44); color: #fff; box-shadow: 0 1px 2px rgba(58, 41, 32, 0.18); }\n.ds-card-ver:hover { background: var(--cor-madeira-hover, #654c36); border-color: var(--cor-madeira-hover, #654c36); }\n.ds-card-whats { background: var(--cor-superficie, #faf8f4); border-color: var(--cor-borda, #d7d0c5); color: var(--cor-texto, #1c1b19); }\n.ds-card-whats:hover { border-color: var(--cor-taupe, #81766a); background: #fff; }\n.ds-card-whats svg { flex: none; width: 22px; height: 22px; }\n.ds-card-nome a:focus-visible, .ds-card-ver:focus-visible, .ds-card-whats:focus-visible { outline: 3px solid var(--cor-madeira, #7a5e44); outline-offset: 3px; }\n.ds-card-ver:active, .ds-card-whats:active { transform: scale(0.98); }\n@container (min-width: 480px) { .ds-card-acoes { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); } }"
+    },
+    {
+      "name": "Campo de busca",
+      "kind": "input",
+      "refersTo": "input-busca",
+      "description": "A busca da loja: rótulo visível, campo de 56px e o botão \"Buscar\" escrito ao lado. No foco, borda madeira e anel de 3px.",
+      "html": "<div class=\"ds-busca\" role=\"search\">\n  <label class=\"ds-busca-rotulo\" for=\"ds-busca-campo\">Procurar um modelo</label>\n  <div class=\"ds-busca-linha\">\n    <input class=\"ds-busca-campo\" id=\"ds-busca-campo\" type=\"search\" placeholder=\"Ex.: retrátil, canto, poltrona\" autocomplete=\"off\">\n    <button class=\"ds-busca-botao\" type=\"button\"><svg aria-hidden=\"true\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z\"/></svg>Buscar</button>\n  </div>\n</div>",
+      "css": ".ds-busca { max-width: 640px; color: var(--cor-texto, #1c1b19); font-family: var(--fonte, 'Montserrat', system-ui, sans-serif); font-size: var(--texto-corpo, clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem)); }\n.ds-busca-rotulo { display: block; margin-bottom: 8px; font-weight: 600; }\n.ds-busca-linha { display: flex; gap: 10px; }\n.ds-busca-campo { flex: 1; min-width: 0; height: 56px; padding: 0 18px; border: 1px solid var(--cor-borda, #d7d0c5); border-radius: var(--raio-controle, 8px); background: var(--cor-superficie, #faf8f4); color: inherit; font: inherit; font-size: 1.0625rem; transition: border-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), box-shadow var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)); }\n.ds-busca-campo::placeholder { color: var(--cor-texto-suave, #6e6961); opacity: 1; }\n.ds-busca-campo:focus { outline: none; border-color: var(--cor-madeira, #7a5e44); box-shadow: 0 0 0 3px rgba(122, 94, 68, 0.2); }\n.ds-busca-botao { display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 26px; border: 2px solid var(--cor-madeira, #7a5e44); border-radius: var(--raio-controle, 8px); background: var(--cor-madeira, #7a5e44); color: #fff; font: inherit; font-size: 1.0625rem; font-weight: 600; line-height: 1.2; cursor: pointer; transition: background-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), transform var(--duracao-rapida, 160ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-busca-botao svg { flex: none; width: 22px; height: 22px; }\n.ds-busca-botao:hover { background: var(--cor-madeira-hover, #654c36); border-color: var(--cor-madeira-hover, #654c36); }\n.ds-busca-botao:focus-visible { outline: 3px solid var(--cor-madeira, #7a5e44); outline-offset: 3px; }\n.ds-busca-botao:active { transform: scale(0.98); }"
+    },
+    {
+      "name": "Chips de tipo",
+      "kind": "chip",
+      "refersTo": "chip-tipo",
+      "description": "O único filtro da loja: tipos de sofá em chips de 48px, com a quantidade ao lado. O atual fica em madeira, e a contagem dele vai em branco cheio.",
+      "html": "<nav class=\"ds-tipos\" aria-label=\"Tipos de sofá\"><ul>\n  <li><a href=\"#\">Todos os modelos</a></li>\n  <li><a href=\"#\" aria-current=\"page\">Sofás retráteis <span>11</span></a></li>\n  <li><a href=\"#\">Sofás de canto <span>5</span></a></li>\n  <li><a href=\"#\">Sofás-cama <span>4</span></a></li>\n  <li><a href=\"#\">Poltronas <span>2</span></a></li>\n</ul></nav>",
+      "css": ".ds-tipos ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }\n.ds-tipos a { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 15px; border: 1px solid var(--cor-borda, #d7d0c5); border-radius: var(--raio-controle, 8px); background: var(--cor-superficie, #faf8f4); color: var(--cor-texto, #1c1b19); font-family: var(--fonte, 'Montserrat', system-ui, sans-serif); font-size: var(--texto-corpo, clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem)); font-weight: 600; text-decoration: none; white-space: nowrap; transition: border-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), background-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)); }\n.ds-tipos a span { color: var(--cor-texto-suave, #6e6961); font-weight: 500; }\n.ds-tipos a:hover { border-color: var(--cor-taupe, #81766a); }\n.ds-tipos a:focus-visible { outline: 3px solid var(--cor-madeira, #7a5e44); outline-offset: 3px; }\n.ds-tipos a[aria-current='page'] { border-color: var(--cor-madeira, #7a5e44); background: var(--cor-madeira, #7a5e44); color: #fff; }\n.ds-tipos a[aria-current='page'] span { color: #fff; }"
+    },
+    {
+      "name": "Navegação do cabeçalho",
+      "kind": "nav",
+      "refersTo": "cabecalho",
+      "description": "Cabeçalho off-white de 84px com fio de costura embaixo. O fio de madeira cresce da esquerda no hover e fica na página atual, que vai em 700.",
+      "html": "<header class=\"ds-cabecalho\">\n  <nav aria-label=\"Principal\"><ul>\n    <li><a href=\"#\" aria-current=\"page\">Início</a></li>\n    <li><a href=\"#\">Sofás</a></li>\n    <li><a href=\"#\">Poltronas</a></li>\n    <li><a href=\"#\">Como comprar</a></li>\n    <li><a href=\"#\">Sobre nós</a></li>\n    <li><a href=\"#\">Contato</a></li>\n  </ul></nav>\n  <a class=\"ds-cabecalho-carrinho\" href=\"#\">Carrinho (2)</a>\n</header>",
+      "css": ".ds-cabecalho { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 28px; min-height: 84px; padding: 0 24px; border-bottom: 1px solid var(--cor-borda, #d7d0c5); background: var(--cor-superficie, #faf8f4); color: var(--cor-texto, #1c1b19); font-family: var(--fonte, 'Montserrat', system-ui, sans-serif); }\n.ds-cabecalho ul { display: flex; flex-wrap: wrap; gap: 0 clamp(14px, 1.9vw, 32px); margin: 0; padding: 0; list-style: none; }\n.ds-cabecalho nav a { position: relative; display: inline-flex; align-items: center; min-height: 44px; color: inherit; font-size: 1.0625rem; font-weight: 500; text-decoration: none; white-space: nowrap; }\n.ds-cabecalho nav a::after { content: ''; position: absolute; inset: auto 0 6px; height: 2px; border-radius: 2px; background: var(--cor-madeira, #7a5e44); scale: 0 1; transform-origin: left; transition: scale var(--duracao-media, 260ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-cabecalho nav a:hover::after, .ds-cabecalho nav a[aria-current='page']::after { scale: 1 1; }\n.ds-cabecalho nav a[aria-current='page'] { font-weight: 700; }\n.ds-cabecalho a:focus-visible { outline: 3px solid var(--cor-madeira, #7a5e44); outline-offset: 3px; border-radius: 4px; }\n.ds-cabecalho-carrinho { display: inline-flex; align-items: center; min-height: 48px; color: inherit; font-size: 1.0625rem; font-weight: 600; text-decoration: none; white-space: nowrap; }\n.ds-cabecalho-carrinho:hover { text-decoration: underline; text-underline-offset: 0.2em; }"
+    },
+    {
+      "name": "Medidas",
+      "kind": "custom",
+      "refersTo": "medida-item",
+      "description": "A assinatura da página do produto: blocos grandes com o número em 700 tabular e o detalhe em linguagem simples. Medidas reais do Sofá Porto Príncipe.",
+      "html": "<section class=\"ds-medidas\">\n  <h2 class=\"ds-medidas-titulo\"><svg aria-hidden=\"true\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M233.91,74.79,181.22,22.1a14,14,0,0,0-19.8,0L22.09,161.41a14,14,0,0,0,0,19.8L74.78,233.9a14,14,0,0,0,19.8,0L233.91,94.59A14,14,0,0,0,233.91,74.79ZM225.42,86.1,86.1,225.41h0a2,2,0,0,1-2.83,0L30.58,172.73a2,2,0,0,1,0-2.83L64,136.48l27.76,27.76a6,6,0,1,0,8.48-8.48L72.48,128,96,104.48l27.76,27.76a6,6,0,0,0,8.48-8.48L104.48,96,128,72.49l27.76,27.75a6,6,0,0,0,8.48-8.48L136.49,64,169.9,30.59a2,2,0,0,1,2.83,0l52.69,52.68A2,2,0,0,1,225.42,86.1Z\"/></svg>Medidas</h2>\n  <dl class=\"ds-medidas-lista\">\n    <div class=\"ds-medida\"><dt>Largura</dt><dd class=\"ds-medida-valor\">2,30 m</dd><dd class=\"ds-medida-detalhe\">De um braço ao outro</dd></div>\n    <div class=\"ds-medida\"><dt>Altura</dt><dd class=\"ds-medida-valor\">1,05 m</dd><dd class=\"ds-medida-detalhe\">Do chão ao alto do encosto</dd></div>\n    <div class=\"ds-medida\"><dt>Profundidade</dt><dd class=\"ds-medida-valor\">1,15 m</dd><dd class=\"ds-medida-detalhe\">Fechado, da frente à parede</dd></div>\n    <div class=\"ds-medida\"><dt>Aberto</dt><dd class=\"ds-medida-valor\">1,80 m</dd><dd class=\"ds-medida-detalhe\">Com os assentos puxados</dd></div>\n  </dl>\n  <p class=\"ds-medidas-dica\">Antes de comprar, meça o espaço da sala e a largura da porta por onde o sofá vai entrar.</p>\n</section>",
+      "css": ".ds-medidas { max-width: 560px; color: var(--cor-texto, #1c1b19); font-family: var(--fonte, 'Montserrat', system-ui, sans-serif); }\n.ds-medidas-titulo { display: flex; align-items: center; gap: 12px; margin: 0; font-size: clamp(1.5rem, 1.3rem + 0.6vw, 1.875rem); font-weight: 500; line-height: 1.18; letter-spacing: -0.012em; }\n.ds-medidas-titulo svg { width: 34px; height: 34px; color: var(--cor-madeira, #7a5e44); }\n.ds-medidas-lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 20px 0 0; }\n.ds-medida { padding: 18px 18px 16px; border: 1px solid var(--cor-borda, #d7d0c5); border-radius: var(--raio, 12px); background: var(--cor-superficie, #faf8f4); }\n.ds-medida dt { font-size: var(--texto-menor, 1rem); font-weight: 600; }\n.ds-medida-valor { margin: 4px 0 0; font-size: clamp(1.5rem, 1.35rem + 0.5vw, 1.875rem); font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; }\n.ds-medida-detalhe { margin: 6px 0 0; color: var(--cor-texto-suave, #6e6961); font-size: var(--texto-menor, 1rem); line-height: 1.4; }\n.ds-medidas-dica { margin: 16px 0 0; color: var(--cor-texto-suave, #6e6961); font-size: var(--texto-menor, 1rem); }"
+    },
+    {
+      "name": "Painel de compra",
+      "kind": "custom",
+      "refersTo": "button-comprar",
+      "description": "O caixa: valor (ou \"Consulte o valor no WhatsApp\"), disponibilidade com o ponto de estado, o botão de comprar de 64px e o contorno de adicionar ao carrinho.",
+      "html": "<div class=\"ds-painel\">\n  <p class=\"ds-painel-consulte\">Consulte o valor no WhatsApp</p>\n  <p class=\"ds-painel-disp\" data-tipo=\"pronta-entrega\">Pronta entrega.</p>\n  <div class=\"ds-painel-botoes\">\n    <a class=\"ds-painel-comprar\" href=\"#\"><svg aria-hidden=\"true\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M152.58,145.23l23,11.48A24,24,0,0,1,152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155ZM232,128A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-40,24a8,8,0,0,0-4.42-7.16l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88A40,40,0,0,0,192,152Z\"/></svg>Comprar pelo WhatsApp</a>\n    <button class=\"ds-painel-adicionar\" type=\"button\"><svg aria-hidden=\"true\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z\"/></svg>Adicionar ao carrinho</button>\n  </div>\n  <p class=\"ds-painel-explica\">Ao tocar em <strong>Comprar pelo WhatsApp</strong>, a conversa abre com o modelo já escrito. É só enviar, e a Nobre te passa o valor.</p>\n</div>",
+      "css": ".ds-painel { display: grid; gap: 22px; max-width: 460px; color: var(--cor-texto, #1c1b19); font-family: var(--fonte, 'Montserrat', system-ui, sans-serif); font-size: var(--texto-corpo, clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem)); line-height: 1.6; }\n.ds-painel p { margin: 0; }\n.ds-painel-consulte { color: var(--cor-madeira, #7a5e44); font-size: var(--texto-grande, clamp(1.1875rem, 1.12rem + 0.35vw, 1.375rem)); font-weight: 700; }\n.ds-painel-disp { display: flex; align-items: center; gap: 10px; font-size: var(--texto-menor, 1rem); }\n.ds-painel-disp::before { content: ''; flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--cor-taupe, #81766a); }\n.ds-painel-disp[data-tipo='pronta-entrega']::before { background: var(--cor-sucesso, #3f7a4f); }\n.ds-painel-disp[data-tipo='indisponivel']::before { background: var(--cor-alerta, #9a3b2e); }\n.ds-painel-botoes { display: grid; gap: 12px; }\n.ds-painel-comprar { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 0 26px; border: 2px solid transparent; border-radius: var(--raio-controle, 8px); font-family: var(--fonte, 'Montserrat', system-ui, sans-serif); font-size: 1.0625rem; font-weight: 600; line-height: 1.2; letter-spacing: 0.005em; text-decoration: none; white-space: nowrap; cursor: pointer; transition: background-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), border-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), box-shadow var(--duracao-media, 260ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)), transform var(--duracao-rapida, 160ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-painel-comprar svg { flex: none; width: 22px; height: 22px; transition: transform var(--duracao-media, 260ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-painel-comprar:active { transform: scale(0.98); }\n.ds-painel-adicionar { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 0 26px; border: 2px solid transparent; border-radius: var(--raio-controle, 8px); font-family: var(--fonte, 'Montserrat', system-ui, sans-serif); font-size: 1.0625rem; font-weight: 600; line-height: 1.2; letter-spacing: 0.005em; text-decoration: none; white-space: nowrap; cursor: pointer; transition: background-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), border-color var(--duracao-rapida, 160ms) var(--ease-suave, cubic-bezier(0.33, 1, 0.68, 1)), box-shadow var(--duracao-media, 260ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)), transform var(--duracao-rapida, 160ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-painel-adicionar svg { flex: none; width: 22px; height: 22px; transition: transform var(--duracao-media, 260ms) var(--ease-saida, cubic-bezier(0.23, 1, 0.32, 1)); }\n.ds-painel-adicionar:active { transform: scale(0.98); }\n.ds-painel-comprar { min-height: 64px; font-size: 1.1875rem; background: var(--cor-madeira, #7a5e44); border-color: var(--cor-madeira, #7a5e44); color: #fff; box-shadow: 0 1px 2px rgba(58, 41, 32, 0.18); }\n.ds-painel-comprar svg { width: 26px; height: 26px; }\n.ds-painel-comprar:hover { background: var(--cor-madeira-hover, #654c36); border-color: var(--cor-madeira-hover, #654c36); box-shadow: 0 10px 22px -12px rgba(58, 41, 32, 0.55); }\n.ds-painel-adicionar { background: var(--cor-superficie, #faf8f4); border-color: var(--cor-borda, #d7d0c5); color: var(--cor-texto, #1c1b19); }\n.ds-painel-adicionar:hover { border-color: var(--cor-taupe, #81766a); background: #fff; }\n.ds-painel-comprar:focus-visible, .ds-painel-adicionar:focus-visible { outline: 3px solid var(--cor-madeira, #7a5e44); outline-offset: 3px; }\n.ds-painel-explica { color: var(--cor-texto-suave, #6e6961); font-size: var(--texto-menor, 1rem); line-height: 1.5; }\n.ds-painel-explica strong { color: var(--cor-texto, #1c1b19); font-weight: 600; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "O Showroom de Madeira e Creme",
+    "overview": "A loja da Nobre é um showroom, não um marketplace. A foto real do catálogo é o produto e ocupa o lugar principal de cada tela: de ponta a ponta no hero, grande no card e na galeria. O resto (o creme, a madeira, o texto) existe pra deixar o sofá à vista e levar a pessoa até o WhatsApp, que faz o papel do caixa. O caminho é sempre o mesmo: ver o sofá, conferir as medidas, tocar em \"Comprar pelo WhatsApp\" e mandar a mensagem, que já sai escrita. Não há pagamento no site, então não há tela de checkout: o fim de todo caminho é um botão cor de madeira com a palavra WhatsApp.\n\nA superfície alterna creme e off-white com seções inteiras de madeira escura, como piso claro e painel de madeira numa sala. Uma cor de ação só, a madeira média, que vira champanhe quando entra no escuro. Montserrat em tudo, de 400 a 700, e uma única frase em serifada itálica, no banner, como no mockup aprovado. A densidade é baixa e os alvos são grandes, porque o público tem muita gente de idade, sem costume de comprar pela internet, que chega pelo celular: texto corrido de 18 a 20px, nada abaixo de 16px, contraste alto e botão de 56px sempre com a ação escrita.\n\nRejeições confirmadas: o molde de marketplace carregado de filtros (a loja filtra só por tipo de sofá), a identidade inicial em preto e prata (trocada pelo marrom e creme a pedido da Edna) e qualquer texto desbotado, seja cinza claro, seja opacidade reduzida.",
+    "keyCharacteristics": [
+      "Foto real do catálogo como protagonista: de ponta a ponta no hero, grande no card, na galeria e no banner.",
+      "Seções claras (creme e off-white) alternando com seções de madeira escura.",
+      "Uma cor de ação: madeira no claro, champanhe no escuro.",
+      "Montserrat de 400 a 700 em tudo; uma frase serifada itálica, só no banner.",
+      "Medidas pensadas pro leitor idoso: corpo de 18 a 20px, piso de 16px, botão de 56px.",
+      "WhatsApp à vista em toda tela, sempre com texto ao lado.",
+      "Sombra tingida de marrom; raio de 12px na superfície e de 8px no controle."
+    ],
+    "rules": [
+      {
+        "name": "A Regra da Madeira Escurecida",
+        "body": "A cor de ação é #7a5e44: o #937659 do mockup escurecido até 5,98:1 com texto branco, porque o original dá 4,2:1. Texto branco nunca vai sobre o tom do mockup, e botão novo não inventa outra madeira.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra da Madeira no Escuro",
+        "body": "Sobre o marrom, a madeira some (2,3:1). Dentro de uma seção escuro, link, anel de foco e botão viram champanhe, e o botão champanhe leva texto grafite.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Texto Firme",
+        "body": "Todo texto passa de 4,5:1 contra o fundo onde está. No claro, o mais claro permitido é cor-texto-suave, e só sobre creme ou off-white (no bege cai pra 4,2:1). No escuro, só cor-no-escuro e cor-no-escuro-suave. Texto nunca ganha opacidade reduzida, e cinza frio escuro (do tipo #5E646E, 2,3:1 no marrom) nunca vira texto sobre madeira.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Estado no Ponto",
+        "body": "Verde e tijolo só marcam estado: o ponto de disponibilidade, o marcador de dado de exemplo e o hover de remover. Nunca viram fundo de seção, botão ou selo; até o selo de indisponível do card é grafite, não vermelho.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Grande e Leve",
+        "body": "Quanto maior o texto, mais leve o peso. O título do hero é 400, títulos de seção e de página são 500, e o 700 fica pro que é pequeno e precisa ser achado rápido: nome do sofá, preço, títulos curtos de 16 e 17px. Display nunca vai em 700.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra dos 16 Pixels",
+        "body": "Texto corrido fica entre 18 e 20px e nada desce de 16px. As duas únicas exceções têm 14px e só existem abaixo de 1180px: o número do contador do carrinho e a palavra embaixo dos ícones do cabeçalho.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Serifada Única",
+        "body": "A Cormorant itálica aparece uma vez no site: \"Seu lar, mais completo com Nobre.\", no banner, alinhada à direita, só a partir de 1024px e escondida do leitor de tela. Nenhuma outra serifada, nenhuma segunda frase itálica.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Alternância",
+        "body": "As seções se revezam entre claro (creme ou off-white) e madeira escura, nunca duas marrons seguidas. A seção off-white leva um fio de 1px em cor-borda na borda de cima (a faixa de diferenciais, na de baixo); a marrom dispensa fio.",
+        "section": "layout"
+      },
+      {
+        "name": "A Regra da Sombra de Madeira",
+        "body": "Sombra de elevação é sempre tingida de marrom (rgba(58, 41, 32, ...) ou rgba(28, 20, 15, ...)), baixa e com espalhamento negativo. Preto só entra como sombra de texto de legenda sobre foto.",
+        "section": "elevation"
+      },
+      {
+        "name": "A Regra do Escuro sem Sombra",
+        "body": "Nas seções marrons não há sombra: o card é um véu creme de 5% com borda cor-linha-escura, e o hover sobe o véu pra 9%, a borda pra 55% e o card 3px.",
+        "section": "elevation"
+      },
+      {
+        "name": "A Regra dos Dois Raios",
+        "body": "12px pra superfície que guarda conteúdo (card, bloco de medida, galeria, resumo, aviso, diálogo, retrato) e 8px pra tudo que se toca (botão, campo, chip, opção, quantidade, miniatura). Pílula e círculo ficam pro que flutua sobre foto ou conteúdo (WhatsApp flutuante, play, contador) e pros marcadores (número do passo, ponto de disponibilidade).",
+        "section": "shapes"
+      },
+      {
+        "name": "A Regra dos 56",
+        "body": "Todo botão de ação tem pelo menos 56px e a ação escrita (o de compra, 64px). Ícone sozinho só em controle preso a um campo ou contador (lupa da busca, mais e menos da quantidade), na miniatura da galeria e no X que fecha o aviso, sempre com nome pro leitor de tela e alvo de 44px ou mais.",
+        "section": "components"
+      },
+      {
+        "name": "A Regra do Filtro Único",
+        "body": "A loja tem um campo de busca e uma fileira de chips por tipo de sofá, e só. Sem barra lateral de filtros, sem ordenação, sem faixa de preço: é isso que separa o showroom do molde de marketplace.",
+        "section": "components"
+      },
+      {
+        "name": "A Regra do WhatsApp à Vista",
+        "body": "Toda tela tem um caminho escrito pro WhatsApp: faixa do topo, botão do hero, \"Perguntar no WhatsApp\" em cada card, caixa do \"Como comprar\", rodapé e o flutuante depois de 320px. O logo do WhatsApp nunca aparece sozinho: sempre tem texto ao lado.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Use a madeira (#7a5e44) como a única cor de ação no claro e o champanhe (#b89a72) como a única no escuro.",
+      "Mantenha o texto corrido em texto-corpo (18 a 20px) e nada abaixo de 16px, fora as duas exceções de 14px do cabeçalho abaixo de 1180px.",
+      "Dê a todo botão de ação 56px de altura e a ação escrita; o de compra pelo WhatsApp tem 64px.",
+      "Alterne seções claras e marrons, com fio de 1px cor-borda na seção off-white.",
+      "Use foto real do catálogo recortada pra preencher, com fundo bege (no claro) ou nogueira (no escuro) enquanto carrega.",
+      "Tinja toda sombra de elevação de marrom, baixa e com espalhamento negativo.",
+      "Use 12px nas superfícies e 8px nos controles.",
+      "Use números tabulares em preço, medida e quantidade.",
+      "Mostre \"Consulte o valor no WhatsApp\" em madeira quando não houver preço cadastrado."
+    ],
+    "donts": [
+      "Não use o #937659 do mockup com texto branco (4,2:1).",
+      "Não ponha a madeira de ação dentro de seção marrom (2,3:1).",
+      "Não use texto com opacidade reduzida, nem cinza frio escuro (do tipo #5E646E) como texto sobre o marrom.",
+      "Não ponha cor-texto-suave sobre cor-bege (4,2:1).",
+      "Não use verde nem tijolo como fundo, botão ou selo: eles só marcam estado.",
+      "Não adicione filtro lateral, ordenação ou faixa de preço na loja.",
+      "Não use outra serifada, nem a Cormorant fora da frase do banner.",
+      "Não ponha título grande em 700: display e seção ficam em 400 e 500.",
+      "Não use sombra preta neutra; preto só em sombra de texto de legenda sobre foto.",
+      "Não crie botão de ação só com ícone.",
+      "Não ponha rótulo miúdo acima do título (eyebrow): o título abre a seção sozinho.",
+      "Não volte ao preto e prata da identidade inicial."
+    ]
+  }
+}

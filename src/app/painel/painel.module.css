@@ -1,0 +1,678 @@
+/*
+ * Visual do painel. Mesmas cores e fontes da loja, mas mais simples e mais
+ * apertado: aqui é ferramenta de trabalho, não vitrine.
+ *
+ * A Edna mexe no painel pelo celular, com o sofá na frente. Então: campo de
+ * 56 px, letra de 18 px pra cima, rótulo sempre visível (nada de placeholder
+ * fazendo papel de rótulo) e botão com palavra, nunca só ícone.
+ */
+
+.pagina {
+  min-height: 100dvh;
+  background: var(--cor-fundo);
+}
+
+/* Cabeçalho ------------------------------------------------------------------- */
+
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--cor-marrom);
+  color: var(--cor-no-escuro);
+}
+
+.topoLinha {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px var(--margem);
+}
+
+.marca {
+  display: grid;
+  gap: 2px;
+  margin-right: auto;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-decoration: none;
+  color: inherit;
+}
+
+.marca span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--cor-no-escuro-suave);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.menu a,
+.sair {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: var(--raio-controle);
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menu a[aria-current='page'] {
+  background: rgba(243, 239, 231, 0.14);
+}
+
+@media (hover: hover) {
+  .menu a:hover,
+  .sair:hover {
+    background: rgba(243, 239, 231, 0.1);
+  }
+}
+
+.menu svg,
+.sair svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Corpo ----------------------------------------------------------------------- */
+
+.conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px var(--margem) 64px;
+}
+
+.cabecalhoPagina {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.titulo {
+  font-size: clamp(1.5rem, 1.3rem + 0.9vw, 2rem);
+  font-weight: 700;
+}
+
+.subtitulo {
+  margin-top: 4px;
+  color: var(--cor-texto-suave);
+}
+
+.voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.voltar svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Cartão ---------------------------------------------------------------------- */
+
+.cartao {
+  padding: 20px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  background: var(--cor-superficie);
+}
+
+.cartao + .cartao {
+  margin-top: 16px;
+}
+
+.tituloCartao {
+  margin-bottom: 4px;
+  font-size: var(--titulo-card);
+  font-weight: 700;
+}
+
+.ajudaCartao {
+  margin-bottom: 16px;
+  color: var(--cor-texto-suave);
+}
+
+/* Formulário ------------------------------------------------------------------ */
+
+.campos {
+  display: grid;
+  gap: 16px;
+}
+
+.duas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.campo {
+  display: grid;
+  gap: 6px;
+}
+
+.campo > label,
+.rotulo {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  min-height: 56px;
+  padding: 12px 14px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-controle);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: inherit;
+  font-size: 1.125rem;
+}
+
+.campo textarea {
+  min-height: 140px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.campo input:focus-visible,
+.campo select:focus-visible,
+.campo textarea:focus-visible {
+  outline: 3px solid var(--cor-madeira);
+  outline-offset: 1px;
+}
+
+.ajuda {
+  color: var(--cor-texto-suave);
+  font-size: 1rem;
+}
+
+/* Campo de dinheiro: o "R$" fica colado no campo, e não dentro dele */
+.dinheiro {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-controle);
+  background: var(--cor-fundo);
+  overflow: hidden;
+}
+
+.dinheiro span {
+  display: grid;
+  place-items: center;
+  padding: 0 12px;
+  background: var(--cor-bege);
+  font-weight: 700;
+}
+
+.dinheiro input {
+  flex: 1;
+  min-width: 0;
+  /* Respiro próprio: aqui o input não está dentro de .campo, que dá o padding */
+  padding: 0 14px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+/* Um tamanho e os três preços: numa linha no computador, dois por linha no celular */
+.tamanhoPrecos {
+  display: grid;
+  grid-template-columns: minmax(150px, 1.2fr) repeat(3, minmax(140px, 1fr));
+  align-items: end;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.tirarTamanho {
+  grid-column: 1 / -1;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-controle);
+  background: var(--cor-superficie);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .tamanhoPrecos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* O nome do tamanho ocupa a linha toda; os preços vêm dois a dois */
+  .tamanhoPrecos > .campo:first-of-type {
+    grid-column: 1 / -1;
+  }
+}
+
+.caixa {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.caixa input {
+  width: 28px;
+  height: 28px;
+  min-height: 0;
+  accent-color: var(--cor-madeira);
+}
+
+/* Botões ---------------------------------------------------------------------- */
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.botao,
+.botaoSecundario,
+.botaoPerigo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 56px;
+  padding: 0 24px;
+  border: 1px solid transparent;
+  border-radius: var(--raio-controle);
+  font-family: inherit;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao {
+  background: var(--cor-madeira);
+  color: #fff;
+}
+
+.botaoSecundario {
+  border-color: var(--cor-borda);
+  background: var(--cor-superficie);
+  color: var(--cor-texto);
+}
+
+.botaoPerigo {
+  border-color: var(--cor-alerta);
+  background: var(--cor-superficie);
+  color: var(--cor-alerta);
+}
+
+.botao:disabled,
+.botaoSecundario:disabled,
+.botaoPerigo:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+@media (hover: hover) {
+  .botao:hover:not(:disabled) {
+    background: var(--cor-madeira-hover);
+  }
+
+  .botaoSecundario:hover:not(:disabled),
+  .botaoPerigo:hover:not(:disabled) {
+    background: var(--cor-bege);
+  }
+}
+
+.botao svg,
+.botaoSecundario svg,
+.botaoPerigo svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Recados --------------------------------------------------------------------- */
+
+.erro,
+.ok {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: var(--raio-controle);
+  font-weight: 600;
+}
+
+.erro {
+  border: 1px solid var(--cor-alerta);
+  background: #fbeeeb;
+  color: var(--cor-alerta);
+}
+
+.ok {
+  border: 1px solid var(--cor-sucesso);
+  background: #eef6ef;
+  color: var(--cor-sucesso);
+}
+
+.erro svg,
+.ok svg {
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+
+/* Lista de sofás -------------------------------------------------------------- */
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filtro {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 16px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  background: var(--cor-superficie);
+  color: var(--cor-texto);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.filtro[aria-pressed='true'] {
+  border-color: var(--cor-madeira);
+  background: var(--cor-madeira);
+  color: #fff;
+}
+
+.lista {
+  display: grid;
+  gap: 12px;
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: 96px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  background: var(--cor-superficie);
+}
+
+.miniatura {
+  width: 96px;
+  height: 72px;
+  border-radius: 8px;
+  background: var(--cor-bege);
+  object-fit: cover;
+}
+
+.semFoto {
+  display: grid;
+  place-items: center;
+  color: var(--cor-texto-suave);
+  font-size: 0.8125rem;
+  text-align: center;
+}
+
+.nomeSofa {
+  font-size: var(--titulo-card);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.metaSofa {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  color: var(--cor-texto-suave);
+  font-size: 1rem;
+}
+
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--cor-bege);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+}
+
+.etiquetaNoAr {
+  background: #e3efe5;
+  color: #2f5c3b;
+}
+
+.etiquetaFora {
+  background: #f4e4e1;
+  color: var(--cor-alerta);
+}
+
+.precoLinha {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.precoLinha .dinheiro {
+  width: 190px;
+}
+
+.precoLinha input {
+  min-height: 52px;
+  font-size: 1.125rem;
+  text-align: right;
+}
+
+.salvarPreco {
+  min-height: 52px;
+  padding: 0 16px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-controle);
+  background: var(--cor-superficie);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.varias {
+  color: var(--cor-texto-suave);
+  font-size: 1rem;
+  text-align: right;
+}
+
+@media (max-width: 720px) {
+  .linha {
+    grid-template-columns: 84px 1fr;
+  }
+
+  .miniatura {
+    width: 84px;
+    height: 84px;
+  }
+
+  .precoLinha,
+  .varias {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .precoLinha .dinheiro {
+    flex: 1;
+  }
+}
+
+/* Fotos do sofá --------------------------------------------------------------- */
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.fotoItem {
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  background: var(--cor-fundo);
+}
+
+.fotoItem img,
+.fotoItem video {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  background: var(--cor-bege);
+  object-fit: cover;
+}
+
+.fotoBotoes {
+  display: flex;
+  gap: 6px;
+}
+
+.fotoBotoes button {
+  flex: 1;
+  min-height: 44px;
+  padding: 0 8px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-controle);
+  background: var(--cor-superficie);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.capa {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--cor-madeira);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  justify-self: start;
+}
+
+.enviando {
+  display: grid;
+  gap: 6px;
+  margin-top: 12px;
+  color: var(--cor-texto-suave);
+  font-weight: 600;
+}
+
+.barra {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--cor-bege);
+  overflow: hidden;
+}
+
+.barra div {
+  height: 100%;
+  background: var(--cor-madeira);
+  transition: width 160ms linear;
+}
+
+/* Entrar ---------------------------------------------------------------------- */
+
+.entrar {
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  padding: 24px var(--margem);
+  background: var(--cor-marrom);
+}
+
+.caixaEntrar {
+  width: min(440px, 100%);
+  padding: 28px;
+  border-radius: var(--raio);
+  background: var(--cor-superficie);
+}
+
+.logoEntrar {
+  display: block;
+  width: 190px;
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+.tituloEntrar {
+  margin-bottom: 4px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.ajudaEntrar {
+  margin-bottom: 20px;
+  color: var(--cor-texto-suave);
+  text-align: center;
+}
+
+.caixaEntrar .botao {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.vazio {
+  padding: 32px;
+  border: 1px dashed var(--cor-borda);
+  border-radius: var(--raio);
+  color: var(--cor-texto-suave);
+  text-align: center;
+}

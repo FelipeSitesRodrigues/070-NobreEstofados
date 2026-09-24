@@ -1,0 +1,57 @@
+# Backup diário do banco da Nobre (tabelas em JSON e fotos dos produtos; vídeos ficam de fora).
+#
+# O arquivo sai criptografado (AES-256) com a senha do segredo BACKUP_SENHA e
+# fica 14 dias nos artefatos desta Action. A mesma rodada diária mantém o
+# projeto grátis do Supabase acordado.
+#
+# Segredos do repositório (Settings > Secrets and variables > Actions):
+#   SUPABASE_URL         https://<projeto>.supabase.co
+#   SUPABASE_SECRET_KEY  chave secreta (sb_secret_...)
+#   BACKUP_SENHA         senha longa, guardada também no gerenciador de senhas
+#
+# Abrir um backup:
+#   openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -in backup-AAAA-MM-DD.tar.gz.enc -out backup.tar.gz
+#   tar -xzf backup.tar.gz
+
+name: Backup do banco
+
+on:
+  schedule:
+    - cron: '17 6 * * *' # 03:17 em São Paulo
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Copiar tabelas e fotos
+        run: node scripts/backup.mjs backup
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+
+      - name: Criptografar
+        run: |
+          arquivo="backup-$(date -u +%F).tar.gz.enc"
+          tar -czf - backup | openssl enc -aes-256-cbc -pbkdf2 -iter 200000 -salt -pass env:BACKUP_SENHA -out "$arquivo"
+          rm -rf backup
+          echo "ARQUIVO=$arquivo" >> "$GITHUB_ENV"
+        env:
+          BACKUP_SENHA: ${{ secrets.BACKUP_SENHA }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARQUIVO }}
+          path: ${{ env.ARQUIVO }}
+          retention-days: 14
+          if-no-files-found: error
