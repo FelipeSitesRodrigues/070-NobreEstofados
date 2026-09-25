@@ -21,10 +21,11 @@
     translate var(--duracao-media) var(--ease-saida);
 }
 
+/* 4:5, mais alto que as fotos: os vídeos da fábrica são gravados em pé */
 .capa {
   position: relative;
   display: block;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
 }
 

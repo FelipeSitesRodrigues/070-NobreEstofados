@@ -32,7 +32,7 @@ export type ConfiguracoesLoja = {
    * site antes de a Edna preencher.
    */
   textoEntrega: string | null
-  /** Parcelas sem juros no cartão ("em até 12x"). null esconde a linha do card. */
+  /** Parcelas ("12x de R$ 274"): valor à vista dividido, em destaque no card e na página. null mostra só o valor. */
   parcelas: number | null
   /** Faixa de aviso no topo da loja ("Fechados dia 7"). null esconde. */
   aviso: string | null
@@ -47,7 +47,7 @@ export const CONFIGURACOES_PADRAO: ConfiguracoesLoja = {
   instagram: null,
   instagramUsuario: null,
   textoEntrega: null,
-  parcelas: null,
+  parcelas: 12,
   aviso: null,
 }
 

@@ -4,7 +4,16 @@ import { cache } from 'react'
 import { clientePublico } from '@/lib/supabase/publico'
 import { urlFoto, urlVideo } from '@/lib/supabase/config'
 import { LINHAS, type LinhaTecido } from './tecidos'
-import { type Categoria, type Foto, type Medidas, type Produto, type Variacao, type Video, disponivel } from './tipos'
+import {
+  type Categoria,
+  type Foto,
+  type Medidas,
+  type Produto,
+  type Variacao,
+  type Video,
+  disponivel,
+  precoMinimo,
+} from './tipos'
 
 /*
  * Leitura do catálogo. Tudo que a loja mostra passa por aqui.
@@ -170,6 +179,19 @@ function ordenar(produtos: Produto[], ordemCategoria: Map<string, number>) {
   )
 }
 
+/**
+ * A ordem da loja: os mais baratos primeiro (pedido da Edna, 2026-09-24, pra
+ * a vitrine parecer acessível). Compara o "a partir de" de cada sofá; sem
+ * preço vai pro fim. Empate cai na ordem de categoria e do painel.
+ */
+function maisBaratosPrimeiro(produtos: Produto[]) {
+  const preco = (p: Produto) => precoMinimo(p) ?? Infinity
+  return [...produtos].sort((a, b) => {
+    const diferenca = preco(a) - preco(b)
+    return diferenca === 0 || Number.isNaN(diferenca) ? 0 : diferenca
+  })
+}
+
 async function consultarCategorias(): Promise<LinhaCategoria[]> {
   const { data, error } = await clientePublico().from('categorias').select('slug, nome, descricao, ordem').order('ordem')
   if (error) throw new Error(`Categorias indisponíveis: ${error.message}`)
@@ -182,7 +204,8 @@ async function consultarAtivos(): Promise<Produto[]> {
 
   const linhas = (data ?? []) as unknown as LinhaProduto[]
   const ordemCategoria = new Map(linhas.map((l) => [l.categorias.slug, l.categorias.ordem]))
-  return ordenar(linhas.map(paraProduto), ordemCategoria)
+  // Sort é estável: quem empata no preço segue a ordem de categoria e do painel
+  return maisBaratosPrimeiro(ordenar(linhas.map(paraProduto), ordemCategoria))
 }
 
 const catalogoEmCache = unstable_cache(
@@ -229,7 +252,8 @@ export async function listarCategorias(): Promise<Categoria[]> {
         descricao: c.descricao || null,
         ordem: c.ordem,
         quantidade: daCategoria.length,
-        capa: daCategoria[0]?.fotos[0] ?? null,
+        // A capa continua sendo a do primeiro na ordem do painel, não a do mais barato
+        capa: [...daCategoria].sort((a, b) => a.ordem - b.ordem)[0]?.fotos[0] ?? null,
       }
     })
     .filter((c) => c.quantidade > 0)

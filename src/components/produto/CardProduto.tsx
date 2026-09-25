@@ -68,13 +68,18 @@ export function CardProduto({ produto, whatsapp, parcelas }: PropsCard) {
         <div className={s.valor}>
           {preco !== null ? (
             <>
-              <p className={s.preco}>
-                {precoVaria(produto) && <span>a partir de </span>}
-                {formatarPreco(preco)}
-              </p>
-              {parcelas && parcelas > 1 && (
-                <p className={s.parcela}>
-                  em até {parcelas}x de {formatarPreco(Math.round(preco / parcelas))}
+              {parcelas && parcelas > 1 ? (
+                <>
+                  <p className={s.preco}>
+                    {precoVaria(produto) && <span>a partir de </span>}
+                    <span className={s.parcelas}>{parcelas}x</span> de {formatarPreco(Math.round(preco / parcelas))}
+                  </p>
+                  <p className={s.parcela}>ou {formatarPreco(preco)} à vista</p>
+                </>
+              ) : (
+                <p className={s.preco}>
+                  {precoVaria(produto) && <span>a partir de </span>}
+                  {formatarPreco(preco)}
                 </p>
               )}
             </>

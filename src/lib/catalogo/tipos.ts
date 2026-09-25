@@ -67,8 +67,9 @@ export function precoNaLinha(variacao: Pick<Variacao, 'precoCentavos' | 'precosT
 export const temTecidos = (produto: Pick<Produto, 'variacoes'>) => produto.variacoes.some((v) => v.precosTecido !== null)
 
 /**
- * "disponivel" é o padrão: vende normalmente e o prazo sai na conversa do
- * WhatsApp. Os outros três aparecem no card e na página quando a Edna marca.
+ * "disponivel" é o padrão: vende normalmente, com o prazo da loja
+ * (PRAZO_ENTREGA_DIAS). Os outros três aparecem no card e na página quando a
+ * Edna marca.
  */
 export type Disponibilidade =
   | { tipo: 'disponivel' }

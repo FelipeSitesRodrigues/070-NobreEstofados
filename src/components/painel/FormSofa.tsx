@@ -5,6 +5,7 @@ import { Check, Plus, Trash, Warning } from '@phosphor-icons/react'
 import { salvarProduto, type EstadoForm } from '@/lib/painel/acoes/produtos'
 import { textoDeCentavos } from '@/lib/painel/dinheiro'
 import type { CategoriaPainel, ProdutoPainel } from '@/lib/painel/consultas'
+import { PRAZO_ENTREGA_DIAS } from '@/lib/site'
 import s from '@/app/painel/painel.module.css'
 import { useAcaoFormulario } from './useAcaoFormulario'
 
@@ -106,7 +107,10 @@ export function FormSofa({ produto, categorias }: { produto: ProdutoPainel | nul
           <div className={s.campo}>
             <label htmlFor="descricao">Descrição</label>
             <textarea id="descricao" name="descricao" defaultValue={produto?.descricao ?? ''} maxLength={2000} />
-            <p className={s.ajuda}>Como você descreveria o sofá para uma cliente na loja.</p>
+            <p className={s.ajuda}>
+              Pode colar a mesma legenda do Instagram. Cada linha com ✨ vira um item da lista, e a linha com o nome do
+              sofá não se repete na página.
+            </p>
           </div>
         </div>
       </section>
@@ -255,7 +259,7 @@ export function FormSofa({ produto, categorias }: { produto: ProdutoPainel | nul
                 defaultValue={produto?.disponibilidade ?? 'disponivel'}
                 onChange={(e) => setDisponibilidade(e.target.value as ProdutoPainel['disponibilidade'])}
               >
-                <option value="disponivel">Normal</option>
+                <option value="disponivel">Normal (entrega em {PRAZO_ENTREGA_DIAS} dias)</option>
                 <option value="pronta-entrega">Pronta-entrega</option>
                 <option value="sob-encomenda">Sob encomenda</option>
                 <option value="indisponivel">Sem estoque</option>

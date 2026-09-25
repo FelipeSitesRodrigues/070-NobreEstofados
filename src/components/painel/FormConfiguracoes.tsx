@@ -67,7 +67,8 @@ export function FormConfiguracoes({ config }: { config: ConfiguracoesPainel }) {
               placeholder="12"
             />
             <p className={s.ajuda}>
-              Aparece embaixo do preço: &ldquo;em até 12x de R$ 290&rdquo;. Deixe vazio para não falar de parcela.
+              Aparece em destaque no preço: &ldquo;12x de R$ 290&rdquo;, com o valor à vista logo abaixo. Deixe vazio
+              para mostrar só o valor à vista.
             </p>
           </div>
 

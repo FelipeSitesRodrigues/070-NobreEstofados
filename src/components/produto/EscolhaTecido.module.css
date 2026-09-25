@@ -60,11 +60,6 @@
   font-weight: 600;
 }
 
-.precoLinha {
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-}
-
 .bolinhas {
   display: flex;
   flex-wrap: wrap;

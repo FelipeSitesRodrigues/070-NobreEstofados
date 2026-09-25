@@ -15,9 +15,32 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* "12x de R$ 274,17": o número que a Edna quer que a pessoa leia primeiro */
 .parcela {
+  color: var(--cor-madeira);
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.parcela strong {
+  font-weight: 700;
+}
+
+.parcela strong:last-child {
+  color: var(--cor-texto);
+  font-size: clamp(2rem, 1.7rem + 1vw, 2.5rem);
+}
+
+.total {
   margin-top: 6px;
   color: var(--cor-texto-suave);
+  font-variant-numeric: tabular-nums;
+}
+
+.total strong {
+  color: var(--cor-texto);
+  font-weight: 600;
 }
 
 .consulte {
@@ -104,6 +127,23 @@
 .opcaoPreco {
   font-weight: 700;
   font-variant-numeric: tabular-nums;
+}
+
+.opcaoParcela,
+.opcaoVista {
+  display: block;
+  text-align: right;
+}
+
+.opcaoParcela {
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+.opcaoVista {
+  color: var(--cor-texto-suave);
+  font-size: var(--texto-menor);
+  font-weight: 500;
 }
 
 .disponibilidade {

@@ -7,7 +7,7 @@ import b from '@/components/ui/botao.module.css'
 import { paraItem, paraMensagem } from '@/lib/carrinho/tipos'
 import { NOME_LINHA, buscarTecido } from '@/lib/catalogo/tecidos'
 import { disponivel, precoNaLinha, temTecidos, type Disponibilidade, type Produto } from '@/lib/catalogo/tipos'
-import { formatarPreco } from '@/lib/site'
+import { PRAZO_ENTREGA_DIAS, formatarPreco } from '@/lib/site'
 import { linkWhatsApp } from '@/lib/whatsapp'
 import { EscolhaTecido } from './EscolhaTecido'
 import s from './PainelCompra.module.css'
@@ -21,7 +21,7 @@ function textoDisponibilidade(d: Disponibilidade) {
     case 'indisponivel':
       return 'Indisponível no momento.'
     default:
-      return 'Prazo de entrega combinado pelo WhatsApp.'
+      return `Prazo de entrega: ${PRAZO_ENTREGA_DIAS} dias.`
   }
 }
 
@@ -85,22 +85,30 @@ export function PainelCompra({ produto, whatsapp, parcelas }: Props) {
                 de <s>{formatarPreco(variacao.precoCheioCentavos)}</s> por
               </p>
             )}
-            <p className={s.preco}>{formatarPreco(preco)}</p>
+            {parcelas && parcelas > 1 ? (
+              <>
+                {/* A parcela é o destaque; o valor à vista fica logo abaixo */}
+                <p className={s.parcela}>
+                  <strong>{parcelas}x</strong> de <strong>{formatarPreco(Math.round(preco / parcelas))}</strong>
+                </p>
+                <p className={s.total}>
+                  ou <strong>{formatarPreco(preco)}</strong> à vista
+                </p>
+              </>
+            ) : (
+              <p className={s.preco}>{formatarPreco(preco)}</p>
+            )}
             {item.linha && (
               <p className={s.nota}>
-                {tecido ? `No ${tecido.nome}` : `No ${NOME_LINHA[item.linha].toLowerCase()}, o tecido mais em conta`}
-              </p>
-            )}
-            {parcelas && parcelas > 1 && (
-              <p className={s.parcela}>
-                em até {parcelas}x de {formatarPreco(Math.round(preco / parcelas))}
+                {/* Sem "o tecido mais em conta": a Edna não quer o veludo parecendo tecido pior */}
+                {tecido ? `No ${tecido.nome}` : `No ${NOME_LINHA[item.linha].toLowerCase()}`}
               </p>
             )}
           </>
         ) : (
           <>
             <p className={s.consulte}>Consulte o valor no WhatsApp</p>
-            <p className={s.nota}>A Nobre te responde com o valor e o prazo de entrega.</p>
+            <p className={s.nota}>A Nobre te responde com o valor.</p>
           </>
         )}
       </div>
@@ -117,7 +125,18 @@ export function PainelCompra({ produto, whatsapp, parcelas }: Props) {
                 <label key={v.id} className={s.opcao}>
                   <input type="radio" name="opcao" value={v.id} checked={v.id === variacao.id} onChange={() => setVariacaoId(v.id)} />
                   <span className={s.opcaoNome}>{v.nome}</span>
-                  {valor !== null && <span className={s.opcaoPreco}>{formatarPreco(valor)}</span>}
+                  {/* A parcela em destaque e o valor à vista embaixo, menor, como no preço lá em cima */}
+                  {valor !== null &&
+                    (parcelas && parcelas > 1 ? (
+                      <span className={s.opcaoPreco}>
+                        <span className={s.opcaoParcela}>
+                          {parcelas}x de {formatarPreco(Math.round(valor / parcelas))}
+                        </span>
+                        <span className={s.opcaoVista}>ou {formatarPreco(valor)} à vista</span>
+                      </span>
+                    ) : (
+                      <span className={s.opcaoPreco}>{formatarPreco(valor)}</span>
+                    ))}
                 </label>
               )
             })}
@@ -136,7 +155,7 @@ export function PainelCompra({ produto, whatsapp, parcelas }: Props) {
         </fieldset>
       )}
 
-      {comTecido && <EscolhaTecido variacao={variacao} escolhido={codigoTecido} onEscolher={setCodigoTecido} />}
+      {comTecido && <EscolhaTecido escolhido={codigoTecido} onEscolher={setCodigoTecido} />}
 
       <p className={s.disponibilidade} data-tipo={produto.disponibilidade.tipo}>
         {textoDisponibilidade(produto.disponibilidade)}

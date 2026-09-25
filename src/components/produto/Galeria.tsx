@@ -27,9 +27,18 @@ export function Galeria({ fotos, video, nome }: { fotos: FotoProduto[]; video: V
 
   if (!item) return <div className={`${s.principal} ${s.vazia}`}>Foto em breve</div>
 
+  // Vídeo gravado em pé no celular (quase todo vídeo da fábrica): numa caixa
+  // 16:10 ele viraria uma faixa fina. A caixa cresce e o vídeo aparece inteiro,
+  // com o borrão da capa nas laterais.
+  const capaEmPe = item.tipo === 'video' && item.video.capa.altura > item.video.capa.largura ? item.video.capa : null
+
   return (
     <div className={s.galeria}>
-      <div className={s.principal}>
+      <div
+        className={s.principal}
+        data-em-pe={capaEmPe ? '' : undefined}
+        style={capaEmPe?.blur ? { backgroundImage: `url("${capaEmPe.blur}")` } : undefined}
+      >
         {item.tipo === 'foto' ? (
           <Foto foto={item.foto} sizes="(max-width: 1023px) 100vw, 740px" prioridade={atual === 0} />
         ) : tocando ? (

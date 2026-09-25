@@ -61,7 +61,8 @@ function mensagemCompra(itens: ItemMensagem[]) {
     if (total > 0) partes.push(`${semPreco ? 'Total dos itens com preço' : 'Total'}: ${formatarPreco(total)}`)
   }
 
-  partes.push(semPreco ? 'Pode me passar o valor e o prazo de entrega?' : 'Pode me passar o prazo de entrega?')
+  // O prazo (25 dias) já está no site: a pergunta que sobra é o valor, quando falta
+  if (semPreco) partes.push('Pode me passar o valor?')
   return partes.join('\n\n')
 }
 

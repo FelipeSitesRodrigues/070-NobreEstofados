@@ -129,6 +129,12 @@
   font-weight: 500;
 }
 
+/* O "12x" tem o mesmo peso do valor da parcela, não o do "a partir de" */
+.preco .parcelas {
+  font-size: inherit;
+  font-weight: 700;
+}
+
 .parcela {
   margin-top: 4px;
   color: var(--cor-texto-suave);

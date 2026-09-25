@@ -23,6 +23,23 @@
   object-fit: contain;
 }
 
+/* Vídeo em pé: caixa alta, vídeo inteiro, borrão da capa em volta */
+.principal[data-em-pe] {
+  aspect-ratio: auto;
+  height: min(76svh, 720px);
+  background-position: center;
+  background-size: cover;
+}
+
+.principal[data-em-pe] img,
+.principal[data-em-pe] .video {
+  object-fit: contain;
+}
+
+.principal[data-em-pe] .video {
+  background: transparent;
+}
+
 .vazia {
   display: grid;
   place-items: center;

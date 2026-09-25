@@ -72,8 +72,24 @@
 }
 
 .descricao {
+  display: grid;
+  gap: 16px;
   max-width: 60ch;
   margin-top: 16px;
+}
+
+/* A lista de ✨ da legenda da Edna: o emoji faz o papel da bolinha */
+.qualidades {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.qualidades li {
+  display: flex;
+  gap: 10px;
 }
 
 .relacionados {

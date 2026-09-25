@@ -11,6 +11,7 @@ import sec from '@/components/ui/secao.module.css'
 import { buscarProduto, listarRelacionados, listarSlugs } from '@/lib/catalogo/consultas'
 import { largura } from '@/lib/catalogo/medidas'
 import { ID_VALIDO } from '@/lib/carrinho/tipos'
+import { blocosDescricao, descricaoCorrida } from '@/lib/catalogo/descricao'
 import { lerConfiguracoes } from '@/lib/loja/configuracoes'
 import { dadosProduto, resumirDescricao, serializarJsonLd } from '@/lib/seo'
 import { SITE } from '@/lib/site'
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: PageProps<'/produto/[slug]'>)
   const produto = await produtoDaRota((await params).slug)
   if (!produto) notFound()
 
-  const descricao = produto.seo.descricao ?? resumirDescricao(produto.descricao)
+  const descricao = produto.seo.descricao ?? resumirDescricao(descricaoCorrida(produto.descricao, produto.nome))
   const caminho = `/produto/${produto.slug}`
 
   return {
@@ -96,7 +97,22 @@ export default async function PaginaProduto({ params }: PageProps<'/produto/[slu
             <h2 id="titulo-descricao" className={s.tituloDescricao}>
               Sobre este modelo
             </h2>
-            <p className={s.descricao}>{produto.descricao}</p>
+            <div className={s.descricao}>
+              {blocosDescricao(produto.descricao, produto.nome).map((bloco, i) =>
+                bloco.tipo === 'paragrafo' ? (
+                  <p key={i}>{bloco.texto}</p>
+                ) : (
+                  <ul key={i} className={s.qualidades}>
+                    {bloco.itens.map((item) => (
+                      <li key={item.texto}>
+                        <span aria-hidden>{item.marcador}</span>
+                        {item.texto}
+                      </li>
+                    ))}
+                  </ul>
+                ),
+              )}
+            </div>
           </section>
         </div>
       </article>

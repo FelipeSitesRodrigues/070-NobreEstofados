@@ -1,3 +1,4 @@
+import { descricaoCorrida } from '@/lib/catalogo/descricao'
 import { precoMinimo, type Produto } from '@/lib/catalogo/tipos'
 import { SITE, urlAbsoluta } from '@/lib/site'
 
@@ -50,7 +51,7 @@ export function dadosProduto(produto: Produto) {
         '@type': 'Product',
         '@id': `${url}#produto`,
         name: produto.nome,
-        description: produto.descricao,
+        description: descricaoCorrida(produto.descricao, produto.nome),
         image: produto.fotos.map((f) => urlAbsoluta(f.src)),
         category: produto.categoria.nome,
         brand: { '@type': 'Brand', name: SITE.nome },

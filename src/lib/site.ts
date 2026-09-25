@@ -11,6 +11,13 @@ export const SITE = {
 } as const
 
 /**
+ * Prazo de entrega da loja, passado pela Edna em 2026-09-24. Vale pra todo
+ * sofá "Normal" no painel; sofá sob encomenda com prazo próprio usa o dele.
+ * Fica aqui, e não no painel, até existir a coluna no banco.
+ */
+export const PRAZO_ENTREGA_DIAS = 25
+
+/**
  * O Google só entra com o site no domínio de verdade. No endereço provisório
  * da Vercel e no localhost, robots.txt e meta robots pedem pra não indexar.
  */
