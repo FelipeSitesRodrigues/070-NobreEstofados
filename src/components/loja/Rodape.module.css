@@ -21,6 +21,10 @@
   color: var(--cor-texto-suave);
 }
 
+.marca .cidade {
+  margin-top: 6px;
+}
+
 .lista h2,
 .contato h2 {
   margin-bottom: 14px;

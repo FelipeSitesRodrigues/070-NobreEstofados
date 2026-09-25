@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react'
 import { Couch, Diamond, ShieldCheck } from '@phosphor-icons/react/dist/ssr'
 import sec from '@/components/ui/secao.module.css'
+import { SITE } from '@/lib/site'
 import s from './Sobre.module.css'
 
 const PILARES = [
@@ -10,8 +11,9 @@ const PILARES = [
 ]
 
 /*
- * TODO(cliente): o texto sobre a Edna foi escrito sem entrevista. Conferir com
- * ela (tempo de loja, cidade, como atende) antes de publicar.
+ * TODO(cliente): o texto sobre a Edineia foi escrito sem entrevista. Nome e
+ * cidade ela passou em 2026-09-25; falta conferir o resto (tempo de loja, como
+ * atende) antes de publicar.
  */
 export function Sobre() {
   return (
@@ -26,8 +28,8 @@ export function Sobre() {
         <div className={s.grade}>
           <figure className={s.retrato} data-revelar>
             {/* eslint-disable-next-line @next/next/no-img-element -- foto única, no tamanho em que aparece */}
-            <img src="/imagens/edna.webp" alt="Edna, dona da Nobre Estofados, na loja" width={312} height={470} loading="lazy" decoding="async" />
-            <figcaption>Edna, à frente da Nobre</figcaption>
+            <img src="/imagens/edna.webp" alt="Edineia, dona da Nobre Estofados, na loja" width={312} height={470} loading="lazy" decoding="async" />
+            <figcaption>Edineia, à frente da Nobre</figcaption>
           </figure>
 
           <div className={s.texto}>
@@ -36,7 +38,7 @@ export function Sobre() {
             </h3>
             <div className={s.paragrafos} data-revelar style={{ '--atraso': 80 } as CSSProperties}>
               <p>
-                À frente da Nobre está a Edna. É ela quem ajuda cada cliente a escolher o sofá certo, com atenção às
+                À frente da Nobre, em {SITE.cidade} ({SITE.estado}), está a Edineia. É ela quem ajuda cada cliente a escolher o sofá certo, com atenção às
                 medidas da sala, ao conforto e ao jeito de cada casa.
               </p>
               <p>

@@ -76,7 +76,7 @@ export default async function PaginaProduto({ params }: PageProps<'/produto/[slu
       <article aria-labelledby="nome-produto">
         <div className={`conteiner ${s.principal}`}>
           <div className={s.galeria}>
-            <Galeria fotos={produto.fotos} video={produto.video} nome={produto.nome} />
+            <Galeria fotos={produto.fotos} videos={produto.videos} nome={produto.nome} />
           </div>
 
           <div className={s.info}>

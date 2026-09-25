@@ -11,7 +11,7 @@ import type { MidiaPainel } from '@/lib/painel/consultas'
 import s from '@/app/painel/painel.module.css'
 
 /*
- * Fotos e vídeo do sofá.
+ * Fotos e vídeos do sofá.
  *
  * O arquivo nunca passa pelo servidor do site: o navegador prepara os três
  * tamanhos, pede um link assinado e sobe direto pro Storage. Só depois o
@@ -46,7 +46,7 @@ export function Midias({
   const [emAcao, iniciar] = useTransition()
 
   const fotos = midias.filter((m) => m.tipo === 'foto')
-  const video = midias.find((m) => m.tipo === 'video') ?? null
+  const temVideo = midias.some((m) => m.tipo === 'video')
 
   async function enviarFotos(arquivos: File[]) {
     setErro(null)
@@ -142,7 +142,7 @@ export function Midias({
 
   return (
     <section className={s.cartao}>
-      <h2 className={s.tituloCartao}>Fotos e vídeo</h2>
+      <h2 className={s.tituloCartao}>Fotos e vídeos</h2>
       <p className={s.ajudaCartao}>
         A primeira foto é a capa: é ela que aparece na lista da loja. Dá para mandar direto da câmera do celular.
       </p>
@@ -189,17 +189,15 @@ export function Midias({
           {fotos.length ? 'Mais fotos' : 'Adicionar fotos'}
         </button>
 
-        {!video && (
-          <button
-            type="button"
-            className={s.botaoSecundario}
-            onClick={() => escolherVideo.current?.click()}
-            disabled={emAcao}
-          >
-            <VideoCamera aria-hidden />
-            Adicionar vídeo
-          </button>
-        )}
+        <button
+          type="button"
+          className={s.botaoSecundario}
+          onClick={() => escolherVideo.current?.click()}
+          disabled={emAcao}
+        >
+          <VideoCamera aria-hidden />
+          {temVideo ? 'Mais um vídeo' : 'Adicionar vídeo'}
+        </button>
       </div>
 
       {/* Escondidos: quem aparece são os botões acima, com texto */}

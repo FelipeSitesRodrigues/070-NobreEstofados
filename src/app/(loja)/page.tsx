@@ -27,7 +27,7 @@ export default async function Inicio() {
   ])
   const ajuda = linkWhatsApp(config.whatsapp, { tipo: 'ajuda' })
 
-  // Dados da loja pro Google (nome, logo, contato)
+  // Dados da loja pro Google (nome, logo, cidade, contato)
   const dadosLoja = {
     '@context': 'https://schema.org',
     '@type': 'FurnitureStore',
@@ -35,6 +35,8 @@ export default async function Inicio() {
     url: SITE.url,
     logo: urlAbsoluta('/imagens/logo-nobre.png'),
     image: urlAbsoluta('/opengraph-image.jpg'),
+    address: { '@type': 'PostalAddress', addressLocality: SITE.cidade, addressRegion: SITE.estado, addressCountry: 'BR' },
+    areaServed: { '@type': 'City', name: `${SITE.cidade}, ${SITE.estado}` },
     ...(config.whatsappDeExemplo ? {} : { telephone: `+${config.whatsapp}` }),
     ...(config.instagram ? { sameAs: [config.instagram] } : {}),
   }

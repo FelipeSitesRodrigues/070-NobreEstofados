@@ -92,7 +92,8 @@ export type Produto = {
   variacoes: Variacao[]
   /** Na ordem escolhida no painel. A primeira é a capa. */
   fotos: Foto[]
-  video: Video | null
+  /** Na ordem do painel. O primeiro é o da seção de vídeos da home. */
+  videos: Video[]
   /** Posição fixa nos Sofás mais procurados. null entra pela procura no WhatsApp. */
   fixado: number | null
   ordem: number

@@ -4,6 +4,7 @@
  *
  *   node --env-file=.env.local scripts/subir-video.mjs <slug> "<video.mp4>"
  *   node --env-file=.env.local scripts/subir-video.mjs <slug> "<video.mp4>" --segundo 3 --substituir
+ *   node --env-file=.env.local scripts/subir-video.mjs <slug> "<video.mp4>" --primeiro
  *
  * Faz o mesmo que o painel (src/components/painel/Midias.tsx): o mp4 vai como
  * veio pro bucket "midias", a capa é um quadro do próprio vídeo em 480, 960 e
@@ -12,7 +13,10 @@
  * (puppeteer-core) com canvas, como no navegador da Edna.
  *
  * --segundo N  quadro da capa (padrão: 1 s, o primeiro costuma ser preto)
- * --substituir apaga o vídeo que o sofá já tem (o banco só aceita um por sofá)
+ * --substituir apaga os vídeos que o sofá já tem
+ * --primeiro   o vídeo novo entra antes dos outros vídeos, logo depois da capa
+ *              (sem ele, entra no fim da galeria). Desde 2026-09-25 o sofá
+ *              pode ter mais de um vídeo
  *
  * O site guarda o catálogo em cache por 5 minutos: o vídeo aparece depois disso.
  */
@@ -29,9 +33,10 @@ const [slug, arquivo] = args.filter((a, i) => !a.startsWith('--') && !args[i - 1
 const indiceSegundo = args.indexOf('--segundo')
 const segundo = indiceSegundo === -1 ? null : Number(args[indiceSegundo + 1])
 const substituir = args.includes('--substituir')
+const primeiro = args.includes('--primeiro')
 
 if (!slug || !arquivo || !existsSync(arquivo) || !arquivo.toLowerCase().endsWith('.mp4')) {
-  console.error('Uso: subir-video.mjs <slug> "<video.mp4>" [--segundo N] [--substituir]')
+  console.error('Uso: subir-video.mjs <slug> "<video.mp4>" [--segundo N] [--substituir] [--primeiro]')
   process.exit(1)
 }
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL
@@ -50,13 +55,7 @@ const supabase = createClient(url, chave)
 const { data: produto, error: erroProduto } = await supabase.from('produtos').select('id, nome').eq('slug', slug).maybeSingle()
 if (erroProduto || !produto) throw new Error(`Sofá "${slug}" não encontrado`)
 
-const { data: antigo } = await supabase
-  .from('midias')
-  .select('id, larguras')
-  .eq('produto_id', produto.id)
-  .eq('tipo', 'video')
-  .maybeSingle()
-if (antigo && !substituir) throw new Error(`${produto.nome} já tem vídeo. Use --substituir pra trocar.`)
+const { data: antigos } = await supabase.from('midias').select('id, larguras').eq('produto_id', produto.id).eq('tipo', 'video')
 
 /** Um quadro do vídeo em PNG, na largura original, tirado pelo Edge. */
 async function tirarQuadro() {
@@ -141,7 +140,7 @@ const enviar = async (caminho, corpo, tipo) => {
   if (error) throw new Error(`Não subiu ${caminho}: ${error.message}`)
 }
 
-if (antigo) {
+for (const antigo of substituir ? (antigos ?? []) : []) {
   const { error } = await supabase.from('midias').delete().eq('id', antigo.id)
   if (error) throw new Error(`Não apagou o vídeo antigo: ${error.message}`)
   await storage.remove([`${produto.id}/${antigo.id}.mp4`, ...antigo.larguras.map((l) => `${produto.id}/${antigo.id}-${l}.webp`)])
@@ -168,6 +167,18 @@ const { error: erroLinha } = await supabase.from('midias').insert({
 if (erroLinha) {
   await storage.remove([`${produto.id}/${midiaId}.mp4`, ...alvos.map((l) => `${produto.id}/${midiaId}-${l}.webp`)])
   throw new Error(`Não gravou a linha: ${erroLinha.message}`)
+}
+
+// --primeiro: capa, o vídeo novo e depois o resto, na ordem em que estava
+if (primeiro) {
+  const { data: todas } = await supabase.from('midias').select('id, tipo').eq('produto_id', produto.id).order('ordem')
+  const outras = (todas ?? []).filter((m) => m.id !== midiaId)
+  const capa = outras.findIndex((m) => m.tipo === 'foto')
+  const ordem = capa === -1 ? [midiaId, ...outras.map((m) => m.id)] : [outras[capa].id, midiaId, ...outras.filter((_, i) => i !== capa).map((m) => m.id)]
+  for (const [i, id] of ordem.entries()) {
+    const { error } = await supabase.from('midias').update({ ordem: i }).eq('id', id)
+    if (error) throw new Error(`Não reordenou a galeria: ${error.message}`)
+  }
 }
 
 console.log(

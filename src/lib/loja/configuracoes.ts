@@ -90,7 +90,7 @@ async function consultar(): Promise<ConfiguracoesLoja> {
 /** Site no domínio de verdade com o WhatsApp de exemplo: melhor não publicar do que mandar cliente pra um número errado. */
 function conferir(config: ConfiguracoesLoja) {
   if (SITE_INDEXAVEL && config.whatsappDeExemplo) {
-    throw new Error('O WhatsApp da loja ainda é o de exemplo. Cadastre o número da Edna no painel antes de publicar.')
+    throw new Error('O WhatsApp da loja ainda é o de exemplo. Cadastre o número da Edineia no painel antes de publicar.')
   }
   return config
 }

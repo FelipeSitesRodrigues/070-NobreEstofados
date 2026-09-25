@@ -9,12 +9,14 @@ import s from './Galeria.module.css'
 type Item = { tipo: 'foto'; foto: FotoProduto } | { tipo: 'video'; video: Video }
 
 /**
- * Fotos e vídeo do produto na mesma galeria, como no Mercado Livre. O vídeo
- * entra logo depois da capa e só baixa quando a pessoa aperta o play.
+ * Fotos e vídeos do produto na mesma galeria, como no Mercado Livre. Os
+ * vídeos entram logo depois da capa, na ordem do painel, e cada um só baixa
+ * quando a pessoa aperta o play.
  */
-export function Galeria({ fotos, video, nome }: { fotos: FotoProduto[]; video: Video | null; nome: string }) {
+export function Galeria({ fotos, videos, nome }: { fotos: FotoProduto[]; videos: Video[]; nome: string }) {
   const itens: Item[] = fotos.map((foto) => ({ tipo: 'foto' as const, foto }))
-  if (video) itens.splice(Math.min(1, itens.length), 0, { tipo: 'video', video })
+  itens.splice(Math.min(1, itens.length), 0, ...videos.map((video) => ({ tipo: 'video' as const, video })))
+  let numeroVideo = 0
 
   const [atual, setAtual] = useState(0)
   const [tocando, setTocando] = useState(false)
@@ -55,16 +57,19 @@ export function Galeria({ fotos, video, nome }: { fotos: FotoProduto[]; video: V
       </div>
 
       {itens.length > 1 && (
-        <ul className={s.miniaturas} aria-label={`Fotos e vídeo: ${nome}`}>
+        <ul className={s.miniaturas} aria-label={`${videos.length > 1 ? 'Fotos e vídeos' : 'Fotos e vídeo'}: ${nome}`}>
           {itens.map((it, i) => {
             const capa = it.tipo === 'foto' ? it.foto : it.video.capa
+            // Vídeo não conta como foto: "foto 2" é a segunda foto, mesmo com vídeo no meio
+            if (it.tipo === 'video') numeroVideo++
+            const rotuloVideo = videos.length > 1 ? `Ver o vídeo ${numeroVideo}` : 'Ver o vídeo'
             return (
               <li key={i}>
                 <button
                   type="button"
                   className={s.miniatura}
                   aria-current={i === atual || undefined}
-                  aria-label={it.tipo === 'video' ? 'Ver o vídeo' : `Ver a foto ${i + 1}`}
+                  aria-label={it.tipo === 'video' ? rotuloVideo : `Ver a foto ${i + 1 - numeroVideo}`}
                   onClick={() => escolher(i)}
                 >
                   <Foto foto={{ ...capa, alt: '' }} sizes="120px" />

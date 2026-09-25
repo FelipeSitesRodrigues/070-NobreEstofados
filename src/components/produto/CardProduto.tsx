@@ -4,7 +4,7 @@ import b from '@/components/ui/botao.module.css'
 import { Foto } from '@/components/ui/Foto'
 import { largura } from '@/lib/catalogo/medidas'
 import { precoMinimo, precoVaria, type Produto } from '@/lib/catalogo/tipos'
-import { formatarPreco } from '@/lib/site'
+import { formatarPreco, soAVista } from '@/lib/site'
 import { linkWhatsApp } from '@/lib/whatsapp'
 import s from './CardProduto.module.css'
 
@@ -27,7 +27,9 @@ export type PropsCard = {
   parcelas: number | null
 }
 
-export function CardProduto({ produto, whatsapp, parcelas }: PropsCard) {
+export function CardProduto({ produto, whatsapp, parcelas: parcelasDaLoja }: PropsCard) {
+  const aVistaSo = soAVista(produto.slug)
+  const parcelas = aVistaSo ? null : parcelasDaLoja
   const href = `/produto/${produto.slug}`
   const preco = precoMinimo(produto)
   const tamanho = largura(produto.medidas)
@@ -43,7 +45,7 @@ export function CardProduto({ produto, whatsapp, parcelas }: PropsCard) {
         ) : (
           <span className={s.semFoto}>Foto em breve</span>
         )}
-        {produto.video && (
+        {produto.videos.length > 0 && (
           <span className={s.selo}>
             <Play aria-hidden weight="fill" />
             Tem vídeo
@@ -77,10 +79,14 @@ export function CardProduto({ produto, whatsapp, parcelas }: PropsCard) {
                   <p className={s.parcela}>ou {formatarPreco(preco)} à vista</p>
                 </>
               ) : (
-                <p className={s.preco}>
-                  {precoVaria(produto) && <span>a partir de </span>}
-                  {formatarPreco(preco)}
-                </p>
+                <>
+                  <p className={s.preco}>
+                    {precoVaria(produto) && <span>a partir de </span>}
+                    {formatarPreco(preco)}
+                  </p>
+                  {/* Segunda linha, como a do "ou R$ X à vista": os cards da grade ficam alinhados */}
+                  {aVistaSo && <p className={s.parcela}>à vista</p>}
+                </>
               )}
             </>
           ) : (

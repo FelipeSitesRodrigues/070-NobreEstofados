@@ -31,11 +31,11 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: 'Nobre Estofados | Sofás retráteis, de canto, sofás-cama e poltronas',
+    default: 'Nobre Estofados em Ubá-MG | Sofás retráteis, de canto e sofás-cama',
     template: '%s | Nobre Estofados',
   },
   description:
-    'Sofás retráteis, de canto, sofás-cama, conjuntos e poltronas da Nobre Estofados. Veja as medidas de cada modelo e compre pelo WhatsApp, com a mensagem já pronta.',
+    'Sofás retráteis, de canto, sofás-cama, conjuntos e poltronas da Nobre Estofados, em Ubá (MG). Veja as medidas de cada modelo e compre pelo WhatsApp.',
   openGraph: {
     type: 'website',
     locale: 'pt_BR',

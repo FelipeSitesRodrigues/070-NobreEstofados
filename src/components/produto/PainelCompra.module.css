@@ -146,6 +146,16 @@
   font-weight: 500;
 }
 
+/* Prazo e o aviso das almofadas: duas linhas curtas, juntas */
+.condicoes {
+  display: grid;
+  gap: 8px;
+}
+
+.almofadas {
+  font-size: var(--texto-menor);
+}
+
 .disponibilidade {
   display: flex;
   align-items: center;

@@ -139,7 +139,6 @@ function medidasDoProduto(linha: LinhaProduto): Medidas {
 
 function paraProduto(linha: LinhaProduto): Produto {
   const midias = [...linha.midias].sort((a, b) => a.ordem - b.ordem)
-  const video = midias.find((m) => m.tipo === 'video')
   return {
     id: linha.id,
     slug: linha.slug,
@@ -162,7 +161,7 @@ function paraProduto(linha: LinhaProduto): Produto {
         precosTecido: lerPrecosTecido(v.precos_tecido),
       })),
     fotos: midias.filter((m) => m.tipo === 'foto').map((m) => paraFoto(linha.id, m)),
-    video: video ? paraVideo(linha.id, video) : null,
+    videos: midias.filter((m) => m.tipo === 'video').map((m) => paraVideo(linha.id, m)),
     fixado: linha.fixado,
     ordem: linha.ordem,
     seo: { titulo: linha.meta_titulo, descricao: linha.meta_descricao },
@@ -306,7 +305,7 @@ export async function listarMaisProcurados(limite = 6) {
 
 /** Produtos com vídeo, pra seção "Veja os sofás em vídeo". */
 export async function listarComVideo(limite = 4) {
-  return (await ativos()).filter((p) => p.video !== null).slice(0, limite)
+  return (await ativos()).filter((p) => p.videos.length > 0).slice(0, limite)
 }
 
 /** Outros modelos da mesma categoria primeiro, depois o resto da loja. */

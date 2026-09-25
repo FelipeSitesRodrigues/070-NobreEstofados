@@ -7,12 +7,13 @@ import b from '@/components/ui/botao.module.css'
 import { paraItem, paraMensagem } from '@/lib/carrinho/tipos'
 import { NOME_LINHA, buscarTecido } from '@/lib/catalogo/tecidos'
 import { disponivel, precoNaLinha, temTecidos, type Disponibilidade, type Produto } from '@/lib/catalogo/tipos'
-import { PRAZO_ENTREGA_DIAS, formatarPreco } from '@/lib/site'
+import { PRAZO_ENTREGA_DIAS, formatarPreco, soAVista } from '@/lib/site'
 import { linkWhatsApp } from '@/lib/whatsapp'
 import { EscolhaTecido } from './EscolhaTecido'
 import s from './PainelCompra.module.css'
 
-function textoDisponibilidade(d: Disponibilidade) {
+/** null: nenhuma linha de prazo (produto só à vista, como a Poltrona Opalla). */
+function textoDisponibilidade(d: Disponibilidade, semPrazo: boolean) {
   switch (d.tipo) {
     case 'pronta-entrega':
       return 'Pronta entrega.'
@@ -21,7 +22,7 @@ function textoDisponibilidade(d: Disponibilidade) {
     case 'indisponivel':
       return 'Indisponível no momento.'
     default:
-      return `Prazo de entrega: ${PRAZO_ENTREGA_DIAS} dias.`
+      return semPrazo ? null : `Prazo de entrega: ${PRAZO_ENTREGA_DIAS} dias.`
   }
 }
 
@@ -35,7 +36,9 @@ type Props = { produto: Produto; whatsapp: string; parcelas: number | null }
  * No celular, quando os botões saem da tela, uma barra com o "Comprar pelo
  * WhatsApp" gruda embaixo: a pessoa lê as medidas sem perder o botão.
  */
-export function PainelCompra({ produto, whatsapp, parcelas }: Props) {
+export function PainelCompra({ produto, whatsapp, parcelas: parcelasDaLoja }: Props) {
+  const aVistaSo = soAVista(produto.slug)
+  const parcelas = aVistaSo ? null : parcelasDaLoja
   const [variacaoId, setVariacaoId] = useState(produto.variacoes[0]?.id)
   const [codigoTecido, setCodigoTecido] = useState<string | null>(null)
   const [adicionado, setAdicionado] = useState(false)
@@ -69,6 +72,7 @@ export function PainelCompra({ produto, whatsapp, parcelas }: Props) {
   const aVenda = disponivel(produto)
   const preco = item.precoCentavos
   const tecido = buscarTecido(codigoTecido)
+  const textoPrazo = textoDisponibilidade(produto.disponibilidade, aVistaSo)
 
   const adicionar = () => {
     carrinho.adicionar(item)
@@ -96,7 +100,10 @@ export function PainelCompra({ produto, whatsapp, parcelas }: Props) {
                 </p>
               </>
             ) : (
-              <p className={s.preco}>{formatarPreco(preco)}</p>
+              <>
+                <p className={s.preco}>{formatarPreco(preco)}</p>
+                {aVistaSo && <p className={s.total}>à vista</p>}
+              </>
             )}
             {item.linha && (
               <p className={s.nota}>
@@ -157,9 +164,15 @@ export function PainelCompra({ produto, whatsapp, parcelas }: Props) {
 
       {comTecido && <EscolhaTecido escolhido={codigoTecido} onEscolher={setCodigoTecido} />}
 
-      <p className={s.disponibilidade} data-tipo={produto.disponibilidade.tipo}>
-        {textoDisponibilidade(produto.disponibilidade)}
-      </p>
+      <div className={s.condicoes}>
+        {textoPrazo && (
+          <p className={s.disponibilidade} data-tipo={produto.disponibilidade.tipo}>
+            {textoPrazo}
+          </p>
+        )}
+        {/* Pedido da Edineia (2026-09-25): as almofadas das fotos não vão junto */}
+        <p className={s.almofadas}>Almofadas decorativas não inclusas.</p>
+      </div>
 
       <div ref={botoes} className={s.botoes}>
         {aVenda ? (

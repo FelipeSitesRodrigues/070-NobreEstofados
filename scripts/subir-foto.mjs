@@ -9,8 +9,10 @@
  * tabela midias. A foto entra no fim da galeria; a capa do sofá não muda (no
  * painel, a estrela troca a capa).
  *
- * --alt  descrição da foto pro leitor de tela e pro Google. Sem ela, vale a
- *        do painel: "<nome do sofá> da Nobre Estofados".
+ * --alt   descrição da foto pro leitor de tela e pro Google. Sem ela, vale a
+ *         do painel: "<nome do sofá> da Nobre Estofados".
+ * --capa  a primeira foto enviada vira a capa (a estrela do painel); a capa
+ *         antiga passa pra segunda posição.
  *
  * O site guarda o catálogo em cache por 5 minutos: a foto aparece depois disso.
  */
@@ -23,11 +25,12 @@ import { createClient } from '@supabase/supabase-js'
 const args = process.argv.slice(2)
 const indiceAlt = args.indexOf('--alt')
 const alt = indiceAlt === -1 ? null : args[indiceAlt + 1]
-const soltos = args.filter((_, i) => i !== indiceAlt && i !== indiceAlt + 1)
+const virarCapa = args.includes('--capa')
+const soltos = args.filter((a, i) => a !== '--capa' && (indiceAlt === -1 || (i !== indiceAlt && i !== indiceAlt + 1)))
 const [slug, ...fotos] = soltos
 
 if (!slug || !fotos.length || fotos.some((f) => !existsSync(f))) {
-  console.error('Uso: subir-foto.mjs <slug> "<foto.jpg>" [...] [--alt "texto"]')
+  console.error('Uso: subir-foto.mjs <slug> "<foto.jpg>" [...] [--alt "texto"] [--capa]')
   process.exit(1)
 }
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL
@@ -46,6 +49,7 @@ const storage = supabase.storage.from(BUCKET)
 const { data: produto, error: erroProduto } = await supabase.from('produtos').select('id, nome').eq('slug', slug).maybeSingle()
 if (erroProduto || !produto) throw new Error(`Sofá "${slug}" não encontrado`)
 
+const enviadas = []
 for (const foto of fotos) {
   if (statSync(foto).size > MAX_BYTES) throw new Error(`${foto} passa de 50 MB`)
 
@@ -62,6 +66,7 @@ for (const foto of fotos) {
   const blur = `data:image/webp;base64,${borrao.toString('base64')}`
 
   const midiaId = randomUUID()
+  enviadas.push(midiaId)
   for (const alvo of alvos) {
     const corpo = await original.clone().resize({ width: Math.min(alvo, largura) }).webp({ quality: 82 }).toBuffer()
     const { error } = await storage.upload(`${produto.id}/${midiaId}-${alvo}.webp`, corpo, { contentType: 'image/webp', upsert: false })
@@ -89,4 +94,15 @@ for (const foto of fotos) {
   }
 
   console.log(`ok ${produto.nome}: ${path.basename(foto)} · ${largura}x${altura} · ${alvos.join(', ')} · posição ${(count ?? 0) + 1}`)
+}
+
+// --capa: a primeira foto enviada vai pra frente, o resto segue na ordem em que estava
+if (virarCapa && enviadas.length) {
+  const { data: todas } = await supabase.from('midias').select('id').eq('produto_id', produto.id).order('ordem')
+  const ordem = [enviadas[0], ...(todas ?? []).map((m) => m.id).filter((id) => id !== enviadas[0])]
+  for (const [i, id] of ordem.entries()) {
+    const { error } = await supabase.from('midias').update({ ordem: i }).eq('id', id)
+    if (error) throw new Error(`Não trocou a capa: ${error.message}`)
+  }
+  console.log(`capa do ${produto.nome} trocada`)
 }

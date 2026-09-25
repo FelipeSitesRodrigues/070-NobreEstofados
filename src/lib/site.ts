@@ -1,13 +1,15 @@
 /**
  * Dados fixos do negócio, usados no site inteiro.
  *
- * WhatsApp, Instagram, entrega e parcelas são da Edna e vêm das configurações
+ * WhatsApp, Instagram, entrega e parcelas são da Edineia e vêm das configurações
  * (lib/loja/configuracoes.ts), editadas no painel. Aqui só o que não muda.
  */
 export const SITE = {
   nome: 'Nobre Estofados',
   url: (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3070').replace(/\/+$/, ''),
   frase: 'Mais que estofados, conforto para a sua história.',
+  cidade: 'Ubá',
+  estado: 'MG',
 } as const
 
 /**
@@ -16,6 +18,14 @@ export const SITE = {
  * Fica aqui, e não no painel, até existir a coluna no banco.
  */
 export const PRAZO_ENTREGA_DIAS = 25
+
+/**
+ * Vendidos só à vista: sem parcelas no card e na página, e sem a linha do
+ * prazo de entrega. Hoje só a Poltrona Opalla (Edineia, 2026-09-25). Pelo
+ * slug, que não muda depois de criado; fica aqui até existir a opção no painel.
+ */
+const SO_A_VISTA = new Set(['poltrona-opalla'])
+export const soAVista = (slug: string) => SO_A_VISTA.has(slug)
 
 /**
  * O Google só entra com o site no domínio de verdade. No endereço provisório

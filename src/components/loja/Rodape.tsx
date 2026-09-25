@@ -18,6 +18,7 @@ export async function Rodape() {
           {/* eslint-disable-next-line @next/next/no-img-element -- logo pequeno, já no tamanho certo */}
           <img src="/imagens/logo-nobre.png" alt="Nobre Estofados" width={480} height={119} loading="lazy" />
           <p>{SITE.frase}</p>
+          <p className={s.cidade}>{SITE.cidade}, Minas Gerais</p>
         </div>
 
         <nav aria-labelledby="rodape-loja" className={s.lista}>
@@ -55,7 +56,7 @@ export async function Rodape() {
             <WhatsappLogo aria-hidden />
             {config.whatsappExibicao}
           </a>
-          {config.whatsappDeExemplo && <p className={s.exemplo}>Número de exemplo: a Edna troca pelo dela no painel.</p>}
+          {config.whatsappDeExemplo && <p className={s.exemplo}>Número de exemplo: a Edineia troca pelo dela no painel.</p>}
           <a href={ajuda} target="_blank" rel="noopener" className={`${b.botao} ${b.contorno}`}>
             <WhatsappLogo aria-hidden weight="fill" />
             Chamar no WhatsApp
@@ -70,7 +71,7 @@ export async function Rodape() {
             !SITE_INDEXAVEL && (
               <p className={`${s.instagram} ${s.exemplo}`}>
                 <InstagramLogo aria-hidden />
-                Instagram: a Edna cadastra no painel
+                Instagram: a Edineia cadastra no painel
               </p>
             )
           )}
