@@ -83,8 +83,8 @@ export async function Rodape() {
           <p>© {new Date().getFullYear()} Nobre Estofados</p>
           <p>
             Site por{' '}
-            <a href="https://www.instagram.com/credialta.sites/" target="_blank" rel="noopener">
-              Credialta Sites
+            <a href="https://www.instagram.com/feliperodrigues.sites/" target="_blank" rel="noopener">
+              Felipe Rodrigues Sites
             </a>
           </p>
         </div>
